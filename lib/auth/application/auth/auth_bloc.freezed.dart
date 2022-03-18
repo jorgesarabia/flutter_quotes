@@ -303,8 +303,10 @@ class _$AuthStateTearOff {
     return const InitialState();
   }
 
-  IsLoggedIn isLoggedIn() {
-    return const IsLoggedIn();
+  IsLoggedIn isLoggedIn(QuoteUser user) {
+    return IsLoggedIn(
+      user,
+    );
   }
 
   UserIsNotLoggedIn userIsNotLoggedIn() {
@@ -320,21 +322,21 @@ mixin _$AuthState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() isLoggedIn,
+    required TResult Function(QuoteUser user) isLoggedIn,
     required TResult Function() userIsNotLoggedIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
     required TResult orElse(),
   }) =>
@@ -419,7 +421,7 @@ class _$InitialState implements InitialState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() isLoggedIn,
+    required TResult Function(QuoteUser user) isLoggedIn,
     required TResult Function() userIsNotLoggedIn,
   }) {
     return initial();
@@ -429,7 +431,7 @@ class _$InitialState implements InitialState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
   }) {
     return initial?.call();
@@ -439,7 +441,7 @@ class _$InitialState implements InitialState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
     required TResult orElse(),
   }) {
@@ -493,6 +495,9 @@ abstract class $IsLoggedInCopyWith<$Res> {
   factory $IsLoggedInCopyWith(
           IsLoggedIn value, $Res Function(IsLoggedIn) then) =
       _$IsLoggedInCopyWithImpl<$Res>;
+  $Res call({QuoteUser user});
+
+  $QuoteUserCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -503,57 +508,87 @@ class _$IsLoggedInCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   IsLoggedIn get _value => super._value as IsLoggedIn;
+
+  @override
+  $Res call({
+    Object? user = freezed,
+  }) {
+    return _then(IsLoggedIn(
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as QuoteUser,
+    ));
+  }
+
+  @override
+  $QuoteUserCopyWith<$Res> get user {
+    return $QuoteUserCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$IsLoggedIn implements IsLoggedIn {
-  const _$IsLoggedIn();
+  const _$IsLoggedIn(this.user);
+
+  @override
+  final QuoteUser user;
 
   @override
   String toString() {
-    return 'AuthState.isLoggedIn()';
+    return 'AuthState.isLoggedIn(user: $user)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is IsLoggedIn);
+        (other.runtimeType == runtimeType &&
+            other is IsLoggedIn &&
+            const DeepCollectionEquality().equals(other.user, user));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+
+  @JsonKey(ignore: true)
+  @override
+  $IsLoggedInCopyWith<IsLoggedIn> get copyWith =>
+      _$IsLoggedInCopyWithImpl<IsLoggedIn>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() isLoggedIn,
+    required TResult Function(QuoteUser user) isLoggedIn,
     required TResult Function() userIsNotLoggedIn,
   }) {
-    return isLoggedIn();
+    return isLoggedIn(user);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
   }) {
-    return isLoggedIn?.call();
+    return isLoggedIn?.call(user);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
     required TResult orElse(),
   }) {
     if (isLoggedIn != null) {
-      return isLoggedIn();
+      return isLoggedIn(user);
     }
     return orElse();
   }
@@ -594,7 +629,12 @@ class _$IsLoggedIn implements IsLoggedIn {
 }
 
 abstract class IsLoggedIn implements AuthState {
-  const factory IsLoggedIn() = _$IsLoggedIn;
+  const factory IsLoggedIn(QuoteUser user) = _$IsLoggedIn;
+
+  QuoteUser get user;
+  @JsonKey(ignore: true)
+  $IsLoggedInCopyWith<IsLoggedIn> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -639,7 +679,7 @@ class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() isLoggedIn,
+    required TResult Function(QuoteUser user) isLoggedIn,
     required TResult Function() userIsNotLoggedIn,
   }) {
     return userIsNotLoggedIn();
@@ -649,7 +689,7 @@ class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
   }) {
     return userIsNotLoggedIn?.call();
@@ -659,7 +699,7 @@ class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? isLoggedIn,
+    TResult Function(QuoteUser user)? isLoggedIn,
     TResult Function()? userIsNotLoggedIn,
     required TResult orElse(),
   }) {
