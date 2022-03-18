@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_quotes/app/config/injectable.dart';
 import 'package:flutter_quotes/auth/application/login/login_bloc.dart';
-import 'package:flutter_quotes/auth/infrastructure/auth_repository.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_button.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_form.dart';
 
@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<LoginBloc>(
-      create: (_) => LoginBloc(AuthRepository()),
+      create: (_) => getIt<LoginBloc>(),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Login Page'),
