@@ -5,8 +5,8 @@ import 'package:flutter_quotes/auth/application/login/login_bloc.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_button.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_form.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

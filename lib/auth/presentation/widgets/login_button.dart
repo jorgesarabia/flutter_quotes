@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_quotes/app/presentation/app_button.dart';
+import 'package:flutter_quotes/app/presentation/widgets/app_button.dart';
 import 'package:flutter_quotes/auth/application/login/login_bloc.dart';
 
 class LoginButton extends StatefulWidget {

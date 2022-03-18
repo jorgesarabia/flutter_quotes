@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_quotes/app/presentation/app_snack_bar.dart';
-import 'package:flutter_quotes/app/presentation/app_text_form.dart';
-import 'package:flutter_quotes/auth/application/auth/auth_bloc.dart';
+import 'package:flutter_quotes/app/presentation/widgets/app_text_form.dart';
 import 'package:flutter_quotes/auth/application/login/login_bloc.dart';
 
 class LoginForm extends StatelessWidget {

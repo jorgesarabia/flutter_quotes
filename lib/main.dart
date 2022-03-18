@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_quotes/app/config/injectable.dart';
-import 'package:flutter_quotes/app/presentation/splash_screen.dart';
+import 'package:flutter_quotes/app/presentation/screens/landing_screen.dart';
 import 'package:flutter_quotes/auth/application/auth/auth_bloc.dart';
 
-void main() => runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureInjection();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const SplashScreen(),
+        home: const LandingScreen(),
       ),
     );
   }
