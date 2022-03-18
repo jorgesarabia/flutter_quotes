@@ -35,13 +35,13 @@ class _LoginButtonState extends State<LoginButton> {
   void _changeWidget(bool isSubmitting) {
     if (isSubmitting) {
       animatedButton = const SizedBox(
-        key: Key('2'),
+        key: Key('is-loading'),
         height: 50.0,
         child: Center(child: CircularProgressIndicator()),
       );
     } else {
       animatedButton = SizedBox(
-        key: const Key('1'),
+        key: const Key('default'),
         height: 50.0,
         child: AppButton(
           label: 'Iniciar Sesión',

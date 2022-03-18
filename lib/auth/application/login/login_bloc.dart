@@ -20,7 +20,27 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   final IAuthFacade authFacade;
 
-  void _mapLoginBtnPressedToState(_LoginBtnPressed event, Emitter<LoginState> emit) {}
-  void _mapEmailChangeToState(_EmailChange event, Emitter<LoginState> emit) {}
-  void _mapPasswordChangeToState(_PasswordChange event, Emitter<LoginState> emit) {}
+  void _mapLoginBtnPressedToState(_LoginBtnPressed event, Emitter<LoginState> emit) async {
+    emit(state.copyWith(autovalidateMode: AutovalidateMode.always));
+    if (state.password.isValid && state.emailAddress.isValid) {
+      emit(state.copyWith(isSubmitting: true));
+
+      final user = await authFacade.signInWithEmailAndPassword(
+        emailAddress: state.emailAddress,
+        password: state.password,
+      );
+
+      print(user);
+
+      emit(state.copyWith(isSubmitting: false));
+    }
+  }
+
+  void _mapEmailChangeToState(_EmailChange event, Emitter<LoginState> emit) {
+    emit(state.copyWith(emailAddress: EmailAddress(event.email.trim())));
+  }
+
+  void _mapPasswordChangeToState(_PasswordChange event, Emitter<LoginState> emit) {
+    emit(state.copyWith(password: Password(event.password)));
+  }
 }
