@@ -1,7 +1,9 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter_quotes/app/domain/i_local_storage_facade.dart';
 import 'package:flutter_quotes/app/domain/password.dart';
 import 'package:flutter_quotes/app/domain/email_address.dart';
 import 'package:flutter_quotes/app/domain/quote_user.dart';
+import 'package:flutter_quotes/auth/domain/auth_failure.dart';
 import 'package:flutter_quotes/auth/domain/i_auth_api.dart';
 import 'package:flutter_quotes/auth/domain/i_auth_facade.dart';
 import 'package:injectable/injectable.dart';
@@ -17,7 +19,7 @@ class AuthRepository implements IAuthFacade {
   QuoteUser? getSignedInUser() => _localStorage.getUser();
 
   @override
-  Future<QuoteUser?> signInWithEmailAndPassword({
+  Future<Option<Either<AuthFailure, QuoteUser>>> signInWithEmailAndPassword({
     required EmailAddress emailAddress,
     required Password password,
   }) async {
@@ -27,8 +29,21 @@ class AuthRepository implements IAuthFacade {
     );
 
     return response.map(
-      success: (success) => success.data,
-      failure: (failure) => null,
+      success: (success) {
+        final user = success.data;
+        _localStorage.saveUser(user);
+
+        return optionOf(right(user));
+      },
+      failure: (failure) {
+        final error = failure.error.maybeMap(
+          badRequest: (badRequest) => AuthFailure.emailAlreadyInUse(badRequest.error),
+          forbidden: (forbidden) => AuthFailure.invalidCombination(forbidden.error),
+          orElse: () => const AuthFailure.serverError('Something went wrong'),
+        );
+
+        return optionOf(left(error));
+      },
     );
   }
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_quotes/app/presentation/widgets/app_snack_bar.dart';
 import 'package:flutter_quotes/app/presentation/widgets/app_text_form.dart';
+import 'package:flutter_quotes/auth/application/auth/auth_bloc.dart';
 import 'package:flutter_quotes/auth/application/login/login_bloc.dart';
 
 class LoginForm extends StatelessWidget {
@@ -10,20 +12,21 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<LoginBloc, LoginState>(
       listener: (context, state) {
-        // state.logginWasSuccessOption.fold(
-        //   () => null,
-        //   (ifSome) {
-        //     ifSome.fold(
-        //       (l) => AppSnackBar.of(context).showSnackBar(
-        //         message: l.maybeMap(
-        //           invalidCombination: (_) => 'Combinación password/usuario inválida',
-        //           orElse: () => 'Error desconocido en el servidor',
-        //         ),
-        //       ),
-        //       (r) => context.read<AuthBloc>().add(const AuthEvent.appIsStarting()),
-        //     );
-        //   },
-        // );
+        state.logginWasSuccessOption.fold(
+          () => null,
+          (ifSome) {
+            ifSome.fold(
+              (left) => AppSnackBar.of(context).showSnackBar(
+                message: left.map(
+                  serverError: (serverError) => serverError.message,
+                  invalidCombination: (invalidCombination) => invalidCombination.message,
+                  emailAlreadyInUse: (emailAlreadyInUse) => emailAlreadyInUse.message,
+                ),
+              ),
+              (right) => context.read<AuthBloc>().add(const AuthEvent.appIsStarting()),
+            );
+          },
+        );
       },
       builder: (context, state) {
         return Form(

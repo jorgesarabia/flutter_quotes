@@ -18,6 +18,6 @@ class AuthApi implements IAuthApi {
       return const ApiResult.failure(error: ApiException.badRequest('email already in use'));
     }
 
-    return const ApiResult.failure(error: ApiException.badRequest('email/password combination does not match'));
+    return const ApiResult.failure(error: ApiException.forbidden('email/password combination does not match'));
   }
 }

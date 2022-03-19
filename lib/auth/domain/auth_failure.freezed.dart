@@ -18,16 +18,22 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$AuthFailureTearOff {
   const _$AuthFailureTearOff();
 
-  ServerError serverError() {
-    return const ServerError();
+  ServerError serverError(String message) {
+    return ServerError(
+      message,
+    );
   }
 
-  InvalidCombination invalidCombination() {
-    return const InvalidCombination();
+  InvalidCombination invalidCombination(String message) {
+    return InvalidCombination(
+      message,
+    );
   }
 
-  EmailAlreadyInUse emailAlreadyInUse() {
-    return const EmailAlreadyInUse();
+  EmailAlreadyInUse emailAlreadyInUse(String message) {
+    return EmailAlreadyInUse(
+      message,
+    );
   }
 }
 
@@ -36,25 +42,27 @@ const $AuthFailure = _$AuthFailureTearOff();
 
 /// @nodoc
 mixin _$AuthFailure {
+  String get message => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() invalidCombination,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function(String message) serverError,
+    required TResult Function(String message) invalidCombination,
+    required TResult Function(String message) emailAlreadyInUse,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,6 +88,10 @@ mixin _$AuthFailure {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $AuthFailureCopyWith<AuthFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -87,6 +99,7 @@ abstract class $AuthFailureCopyWith<$Res> {
   factory $AuthFailureCopyWith(
           AuthFailure value, $Res Function(AuthFailure) then) =
       _$AuthFailureCopyWithImpl<$Res>;
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -96,13 +109,28 @@ class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
   final AuthFailure _value;
   // ignore: unused_field
   final $Res Function(AuthFailure) _then;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_value.copyWith(
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class $ServerErrorCopyWith<$Res> {
+abstract class $ServerErrorCopyWith<$Res>
+    implements $AuthFailureCopyWith<$Res> {
   factory $ServerErrorCopyWith(
           ServerError value, $Res Function(ServerError) then) =
       _$ServerErrorCopyWithImpl<$Res>;
+  @override
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -114,57 +142,80 @@ class _$ServerErrorCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
 
   @override
   ServerError get _value => super._value as ServerError;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(ServerError(
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ServerError implements ServerError {
-  const _$ServerError();
+  const _$ServerError(this.message);
+
+  @override
+  final String message;
 
   @override
   String toString() {
-    return 'AuthFailure.serverError()';
+    return 'AuthFailure.serverError(message: $message)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ServerError);
+        (other.runtimeType == runtimeType &&
+            other is ServerError &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  $ServerErrorCopyWith<ServerError> get copyWith =>
+      _$ServerErrorCopyWithImpl<ServerError>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() invalidCombination,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function(String message) serverError,
+    required TResult Function(String message) invalidCombination,
+    required TResult Function(String message) emailAlreadyInUse,
   }) {
-    return serverError();
+    return serverError(message);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
   }) {
-    return serverError?.call();
+    return serverError?.call(message);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
     required TResult orElse(),
   }) {
     if (serverError != null) {
-      return serverError();
+      return serverError(message);
     }
     return orElse();
   }
@@ -205,14 +256,24 @@ class _$ServerError implements ServerError {
 }
 
 abstract class ServerError implements AuthFailure {
-  const factory ServerError() = _$ServerError;
+  const factory ServerError(String message) = _$ServerError;
+
+  @override
+  String get message;
+  @override
+  @JsonKey(ignore: true)
+  $ServerErrorCopyWith<ServerError> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidCombinationCopyWith<$Res> {
+abstract class $InvalidCombinationCopyWith<$Res>
+    implements $AuthFailureCopyWith<$Res> {
   factory $InvalidCombinationCopyWith(
           InvalidCombination value, $Res Function(InvalidCombination) then) =
       _$InvalidCombinationCopyWithImpl<$Res>;
+  @override
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -225,57 +286,80 @@ class _$InvalidCombinationCopyWithImpl<$Res>
 
   @override
   InvalidCombination get _value => super._value as InvalidCombination;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(InvalidCombination(
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$InvalidCombination implements InvalidCombination {
-  const _$InvalidCombination();
+  const _$InvalidCombination(this.message);
+
+  @override
+  final String message;
 
   @override
   String toString() {
-    return 'AuthFailure.invalidCombination()';
+    return 'AuthFailure.invalidCombination(message: $message)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is InvalidCombination);
+        (other.runtimeType == runtimeType &&
+            other is InvalidCombination &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  $InvalidCombinationCopyWith<InvalidCombination> get copyWith =>
+      _$InvalidCombinationCopyWithImpl<InvalidCombination>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() invalidCombination,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function(String message) serverError,
+    required TResult Function(String message) invalidCombination,
+    required TResult Function(String message) emailAlreadyInUse,
   }) {
-    return invalidCombination();
+    return invalidCombination(message);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
   }) {
-    return invalidCombination?.call();
+    return invalidCombination?.call(message);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
     required TResult orElse(),
   }) {
     if (invalidCombination != null) {
-      return invalidCombination();
+      return invalidCombination(message);
     }
     return orElse();
   }
@@ -316,14 +400,24 @@ class _$InvalidCombination implements InvalidCombination {
 }
 
 abstract class InvalidCombination implements AuthFailure {
-  const factory InvalidCombination() = _$InvalidCombination;
+  const factory InvalidCombination(String message) = _$InvalidCombination;
+
+  @override
+  String get message;
+  @override
+  @JsonKey(ignore: true)
+  $InvalidCombinationCopyWith<InvalidCombination> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmailAlreadyInUseCopyWith<$Res> {
+abstract class $EmailAlreadyInUseCopyWith<$Res>
+    implements $AuthFailureCopyWith<$Res> {
   factory $EmailAlreadyInUseCopyWith(
           EmailAlreadyInUse value, $Res Function(EmailAlreadyInUse) then) =
       _$EmailAlreadyInUseCopyWithImpl<$Res>;
+  @override
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -336,57 +430,80 @@ class _$EmailAlreadyInUseCopyWithImpl<$Res>
 
   @override
   EmailAlreadyInUse get _value => super._value as EmailAlreadyInUse;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(EmailAlreadyInUse(
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$EmailAlreadyInUse implements EmailAlreadyInUse {
-  const _$EmailAlreadyInUse();
+  const _$EmailAlreadyInUse(this.message);
+
+  @override
+  final String message;
 
   @override
   String toString() {
-    return 'AuthFailure.emailAlreadyInUse()';
+    return 'AuthFailure.emailAlreadyInUse(message: $message)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is EmailAlreadyInUse);
+        (other.runtimeType == runtimeType &&
+            other is EmailAlreadyInUse &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  $EmailAlreadyInUseCopyWith<EmailAlreadyInUse> get copyWith =>
+      _$EmailAlreadyInUseCopyWithImpl<EmailAlreadyInUse>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() serverError,
-    required TResult Function() invalidCombination,
-    required TResult Function() emailAlreadyInUse,
+    required TResult Function(String message) serverError,
+    required TResult Function(String message) invalidCombination,
+    required TResult Function(String message) emailAlreadyInUse,
   }) {
-    return emailAlreadyInUse();
+    return emailAlreadyInUse(message);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
   }) {
-    return emailAlreadyInUse?.call();
+    return emailAlreadyInUse?.call(message);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? serverError,
-    TResult Function()? invalidCombination,
-    TResult Function()? emailAlreadyInUse,
+    TResult Function(String message)? serverError,
+    TResult Function(String message)? invalidCombination,
+    TResult Function(String message)? emailAlreadyInUse,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
-      return emailAlreadyInUse();
+      return emailAlreadyInUse(message);
     }
     return orElse();
   }
@@ -427,5 +544,12 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
 }
 
 abstract class EmailAlreadyInUse implements AuthFailure {
-  const factory EmailAlreadyInUse() = _$EmailAlreadyInUse;
+  const factory EmailAlreadyInUse(String message) = _$EmailAlreadyInUse;
+
+  @override
+  String get message;
+  @override
+  @JsonKey(ignore: true)
+  $EmailAlreadyInUseCopyWith<EmailAlreadyInUse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
