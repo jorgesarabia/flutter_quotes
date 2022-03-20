@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_quotes/app/config/injectable.dart';
 import 'package:flutter_quotes/quotes/application/quotes_bloc.dart';
+import 'package:flutter_quotes/quotes/presentation/widgets/quote_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,10 +15,12 @@ class HomeScreen extends StatelessWidget {
         body: Center(
           child: BlocBuilder<QuotesBloc, QuotesState>(
             builder: (context, state) {
+              if (state.isSubmitting) {
+                return const CircularProgressIndicator(color: Colors.white);
+              }
+
               if (state.quote != null) {
-                return Text(
-                  state.quote!.quote,
-                );
+                return QuoteWidget(quote: state.quote!);
               }
 
               return const Text('No hay frase del dia');

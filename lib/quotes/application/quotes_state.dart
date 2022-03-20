@@ -10,7 +10,7 @@ class QuotesState with _$QuotesState {
 
   factory QuotesState.initial() {
     return QuotesState(
-      isSubmitting: false,
+      isSubmitting: true,
       quoteOrFail: none(),
     );
   }

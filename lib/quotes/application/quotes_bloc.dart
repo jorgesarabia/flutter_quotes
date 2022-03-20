@@ -31,6 +31,6 @@ class QuotesBloc extends Bloc<QuotesEvent, QuotesState> {
       ),
     );
 
-    emit(state.copyWith(quoteOrFail: quoteResponse));
+    emit(state.copyWith(quoteOrFail: quoteResponse, isSubmitting: false));
   }
 }
