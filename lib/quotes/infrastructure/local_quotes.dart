@@ -27,7 +27,6 @@ class LocalQuotes implements ILocalQuotes {
 
   @override
   Future<void> saveQuote(QuotesModel quote) async {
-    // final savedQuote = quote.copyWith(getTime: DateTime.now().)
     await _preferences.setString(
       QuotesModel.key,
       jsonEncode(quote),
