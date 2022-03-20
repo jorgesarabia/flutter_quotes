@@ -34,6 +34,7 @@ dev_dependencies:
   freezed: ^1.1.1
   injectable_generator: 
   json_serializable: ^6.1.5
+  mockito: ^5.1.0
 
 flutter:
   uses-material-design: true
