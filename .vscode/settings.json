@@ -22,6 +22,7 @@
   },
   "files.exclude": {
     "**/*.freezed.dart": true,
+    "**/*.mocks.dart": true,
     "**/*.g.dart": true
   },
   "window.zoomLevel": 0.5,
