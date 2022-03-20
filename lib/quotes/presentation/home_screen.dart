@@ -12,6 +12,11 @@ class HomeScreen extends StatelessWidget {
     return BlocProvider<QuotesBloc>(
       create: (_) => getIt<QuotesBloc>()..add(const QuotesEvent.getQuoteOfTheDay()),
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Frase del dia'),
+          centerTitle: true,
+          elevation: 0,
+        ),
         body: Center(
           child: BlocBuilder<QuotesBloc, QuotesState>(
             builder: (context, state) {
