@@ -80,7 +80,7 @@ void main() {
     when(mockQuoteRepository.getQuoteOfTheDay()).thenAnswer((realInvocation) => Future.value(repoResponse));
 
     final _firstState = quotesBloc.state.copyWith(isSubmitting: true, quoteOrFail: none());
-    final _secondState = _firstState.copyWith(isSubmitting: false, quoteOrFail: none());
+    final _secondState = _firstState.copyWith(isSubmitting: false, quoteOrFail: repoResponse);
 
     expectLater(
       quotesBloc.stream,
