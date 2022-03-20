@@ -2,12 +2,13 @@
 // in flutter_quotes/test/app/widgets/landing_screen_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i5;
+import 'dart:async' as _i6;
 
-import 'package:flutter_bloc/flutter_bloc.dart' as _i6;
+import 'package:flutter_bloc/flutter_bloc.dart' as _i7;
 import 'package:flutter_quotes/auth/application/auth/auth_bloc.dart' as _i2;
 import 'package:flutter_quotes/auth/application/login/login_bloc.dart' as _i4;
 import 'package:flutter_quotes/auth/domain/i_auth_facade.dart' as _i3;
+import 'package:flutter_quotes/quotes/application/quotes_bloc.dart' as _i5;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -26,6 +27,8 @@ class _FakeIAuthFacade_1 extends _i1.Fake implements _i3.IAuthFacade {}
 
 class _FakeLoginState_2 extends _i1.Fake implements _i4.LoginState {}
 
+class _FakeQuotesState_3 extends _i1.Fake implements _i5.QuotesState {}
+
 /// A class which mocks [AuthBloc].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -38,9 +41,9 @@ class MockAuthBloc extends _i1.Mock implements _i2.AuthBloc {
   _i2.AuthState get state => (super.noSuchMethod(Invocation.getter(#state),
       returnValue: _FakeAuthState_0()) as _i2.AuthState);
   @override
-  _i5.Stream<_i2.AuthState> get stream => (super.noSuchMethod(
+  _i6.Stream<_i2.AuthState> get stream => (super.noSuchMethod(
       Invocation.getter(#stream),
-      returnValue: Stream<_i2.AuthState>.empty()) as _i5.Stream<_i2.AuthState>);
+      returnValue: Stream<_i2.AuthState>.empty()) as _i6.Stream<_i2.AuthState>);
   @override
   bool get isClosed =>
       (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
@@ -58,21 +61,21 @@ class MockAuthBloc extends _i1.Mock implements _i2.AuthBloc {
       super.noSuchMethod(Invocation.method(#emit, [state]),
           returnValueForMissingStub: null);
   @override
-  void on<E extends _i2.AuthEvent>(_i6.EventHandler<E, _i2.AuthState>? handler,
-          {_i6.EventTransformer<E>? transformer}) =>
+  void on<E extends _i2.AuthEvent>(_i7.EventHandler<E, _i2.AuthState>? handler,
+          {_i7.EventTransformer<E>? transformer}) =>
       super.noSuchMethod(
           Invocation.method(#on, [handler], {#transformer: transformer}),
           returnValueForMissingStub: null);
   @override
-  void onTransition(_i6.Transition<_i2.AuthEvent, _i2.AuthState>? transition) =>
+  void onTransition(_i7.Transition<_i2.AuthEvent, _i2.AuthState>? transition) =>
       super.noSuchMethod(Invocation.method(#onTransition, [transition]),
           returnValueForMissingStub: null);
   @override
-  _i5.Future<void> close() => (super.noSuchMethod(Invocation.method(#close, []),
+  _i6.Future<void> close() => (super.noSuchMethod(Invocation.method(#close, []),
       returnValue: Future<void>.value(),
-      returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
+      returnValueForMissingStub: Future<void>.value()) as _i6.Future<void>);
   @override
-  void onChange(_i6.Change<_i2.AuthState>? change) =>
+  void onChange(_i7.Change<_i2.AuthState>? change) =>
       super.noSuchMethod(Invocation.method(#onChange, [change]),
           returnValueForMissingStub: null);
   @override
@@ -101,10 +104,10 @@ class MockLoginBloc extends _i1.Mock implements _i4.LoginBloc {
   _i4.LoginState get state => (super.noSuchMethod(Invocation.getter(#state),
       returnValue: _FakeLoginState_2()) as _i4.LoginState);
   @override
-  _i5.Stream<_i4.LoginState> get stream =>
+  _i6.Stream<_i4.LoginState> get stream =>
       (super.noSuchMethod(Invocation.getter(#stream),
               returnValue: Stream<_i4.LoginState>.empty())
-          as _i5.Stream<_i4.LoginState>);
+          as _i6.Stream<_i4.LoginState>);
   @override
   bool get isClosed =>
       (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
@@ -123,22 +126,84 @@ class MockLoginBloc extends _i1.Mock implements _i4.LoginBloc {
           returnValueForMissingStub: null);
   @override
   void on<E extends _i4.LoginEvent>(
-          _i6.EventHandler<E, _i4.LoginState>? handler,
-          {_i6.EventTransformer<E>? transformer}) =>
+          _i7.EventHandler<E, _i4.LoginState>? handler,
+          {_i7.EventTransformer<E>? transformer}) =>
       super.noSuchMethod(
           Invocation.method(#on, [handler], {#transformer: transformer}),
           returnValueForMissingStub: null);
   @override
   void onTransition(
-          _i6.Transition<_i4.LoginEvent, _i4.LoginState>? transition) =>
+          _i7.Transition<_i4.LoginEvent, _i4.LoginState>? transition) =>
       super.noSuchMethod(Invocation.method(#onTransition, [transition]),
           returnValueForMissingStub: null);
   @override
-  _i5.Future<void> close() => (super.noSuchMethod(Invocation.method(#close, []),
+  _i6.Future<void> close() => (super.noSuchMethod(Invocation.method(#close, []),
       returnValue: Future<void>.value(),
-      returnValueForMissingStub: Future<void>.value()) as _i5.Future<void>);
+      returnValueForMissingStub: Future<void>.value()) as _i6.Future<void>);
   @override
-  void onChange(_i6.Change<_i4.LoginState>? change) =>
+  void onChange(_i7.Change<_i4.LoginState>? change) =>
+      super.noSuchMethod(Invocation.method(#onChange, [change]),
+          returnValueForMissingStub: null);
+  @override
+  void addError(Object? error, [StackTrace? stackTrace]) =>
+      super.noSuchMethod(Invocation.method(#addError, [error, stackTrace]),
+          returnValueForMissingStub: null);
+  @override
+  void onError(Object? error, StackTrace? stackTrace) =>
+      super.noSuchMethod(Invocation.method(#onError, [error, stackTrace]),
+          returnValueForMissingStub: null);
+}
+
+/// A class which mocks [QuotesBloc].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockQuotesBloc extends _i1.Mock implements _i5.QuotesBloc {
+  MockQuotesBloc() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i5.QuotesState get state => (super.noSuchMethod(Invocation.getter(#state),
+      returnValue: _FakeQuotesState_3()) as _i5.QuotesState);
+  @override
+  _i6.Stream<_i5.QuotesState> get stream =>
+      (super.noSuchMethod(Invocation.getter(#stream),
+              returnValue: Stream<_i5.QuotesState>.empty())
+          as _i6.Stream<_i5.QuotesState>);
+  @override
+  bool get isClosed =>
+      (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
+          as bool);
+  @override
+  void add(_i5.QuotesEvent? event) =>
+      super.noSuchMethod(Invocation.method(#add, [event]),
+          returnValueForMissingStub: null);
+  @override
+  void onEvent(_i5.QuotesEvent? event) =>
+      super.noSuchMethod(Invocation.method(#onEvent, [event]),
+          returnValueForMissingStub: null);
+  @override
+  void emit(_i5.QuotesState? state) =>
+      super.noSuchMethod(Invocation.method(#emit, [state]),
+          returnValueForMissingStub: null);
+  @override
+  void on<E extends _i5.QuotesEvent>(
+          _i7.EventHandler<E, _i5.QuotesState>? handler,
+          {_i7.EventTransformer<E>? transformer}) =>
+      super.noSuchMethod(
+          Invocation.method(#on, [handler], {#transformer: transformer}),
+          returnValueForMissingStub: null);
+  @override
+  void onTransition(
+          _i7.Transition<_i5.QuotesEvent, _i5.QuotesState>? transition) =>
+      super.noSuchMethod(Invocation.method(#onTransition, [transition]),
+          returnValueForMissingStub: null);
+  @override
+  _i6.Future<void> close() => (super.noSuchMethod(Invocation.method(#close, []),
+      returnValue: Future<void>.value(),
+      returnValueForMissingStub: Future<void>.value()) as _i6.Future<void>);
+  @override
+  void onChange(_i7.Change<_i5.QuotesState>? change) =>
       super.noSuchMethod(Invocation.method(#onChange, [change]),
           returnValueForMissingStub: null);
   @override
