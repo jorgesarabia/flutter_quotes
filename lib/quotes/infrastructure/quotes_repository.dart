@@ -39,8 +39,9 @@ class QuoteRepository implements IQuotesFacade {
 
   bool _isNotOld(QuotesModel quotesModel) {
     final getDate = DateTime.parse(quotesModel.getTime!);
-    final difference = getDate.difference(DateTime.now());
+    final now = DateTime.now();
+    final difference = getDate.difference(now);
 
-    return difference.inDays == 0;
+    return difference.inDays == 0 && now.day == getDate.day;
   }
 }
