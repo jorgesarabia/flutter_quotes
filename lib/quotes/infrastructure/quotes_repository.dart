@@ -20,7 +20,7 @@ class QuoteRepository implements IQuotesFacade {
   Future<Option<Either<QuotesFailure, QuotesModel>>> getQuoteOfTheDay() async {
     final savedQuote = _localStorage.getQuote();
 
-    if (savedQuote != null && savedQuote.getTime != null && _isNotOlder(savedQuote)) {
+    if (savedQuote != null && savedQuote.getTime != null && _isNotOld(savedQuote)) {
       return optionOf(right(savedQuote));
     }
 
@@ -37,7 +37,7 @@ class QuoteRepository implements IQuotesFacade {
     );
   }
 
-  bool _isNotOlder(QuotesModel quotesModel) {
+  bool _isNotOld(QuotesModel quotesModel) {
     final getDate = DateTime.parse(quotesModel.getTime!);
     final difference = getDate.difference(DateTime.now());
 
