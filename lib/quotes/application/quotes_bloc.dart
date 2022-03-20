@@ -23,13 +23,17 @@ class QuotesBloc extends Bloc<QuotesEvent, QuotesState> {
 
     final quoteResponse = await _quotesFacade.getQuoteOfTheDay();
 
-    quoteResponse.fold(
+    final quote = quoteResponse.fold(
       () => null,
       (either) => either.fold(
         (failure) => null,
-        (quote) => emit(state.copyWith(quote: quote)),
+        (quote) => quote,
       ),
     );
+
+    if (quote != null) {
+      emit(state.copyWith(quote: quote));
+    }
 
     emit(state.copyWith(quoteOrFail: quoteResponse, isSubmitting: false));
   }
