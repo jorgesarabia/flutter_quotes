@@ -4,6 +4,7 @@ import 'package:flutter_quotes/app/config/injectable.dart';
 import 'package:flutter_quotes/auth/application/login/login_bloc.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_button.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_form.dart';
+import 'package:flutter_quotes/auth/presentation/widgets/login_test.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class LoginScreen extends StatelessWidget {
     return BlocProvider<LoginBloc>(
       create: (_) => getIt<LoginBloc>(),
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: const Text('Login Page'),
         ),
@@ -31,6 +33,7 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 32.0),
                 LoginButton(),
                 SizedBox(height: 32.0),
+                LoginTest(),
               ],
             ),
           ),
