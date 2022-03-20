@@ -48,5 +48,5 @@ class AuthRepository implements IAuthFacade {
   }
 
   @override
-  Future<void> signOut() => _localStorage.removeUser();
+  Future<void> signOut() async => await _localStorage.removeUser();
 }
