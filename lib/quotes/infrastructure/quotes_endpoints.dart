@@ -3,6 +3,8 @@ import 'package:injectable/injectable.dart';
 
 @Injectable(as: IQuotesEndpoints)
 class QuotesEndpoints implements IQuotesEndpoints {
+  const QuotesEndpoints();
+
   @override
   String get getQuoteOfTheDay => 'today';
 }
