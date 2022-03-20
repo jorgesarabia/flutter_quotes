@@ -45,8 +45,8 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       () => _i12.LocalStorage(get<_i8.SharedPreferences>()));
   gh.factory<_i13.IQuotesApi>(
       () => _i14.QuoteApi(get<_i3.ApiClient>(), get<_i6.IQuotesEndpoints>()));
-  gh.factory<_i15.IQuotesFacade>(
-      () => _i16.QuoteRepository(get<_i13.IQuotesApi>()));
+  gh.factory<_i15.IQuotesFacade>(() =>
+      _i16.QuoteRepository(get<_i9.ILocalQuotes>(), get<_i13.IQuotesApi>()));
   gh.factory<_i17.QuotesBloc>(() => _i17.QuotesBloc(get<_i15.IQuotesFacade>()));
   gh.factory<_i18.IAuthFacade>(() => _i19.AuthRepository(
       get<_i11.ILocalStorageFacade>(), get<_i4.IAuthApi>()));
