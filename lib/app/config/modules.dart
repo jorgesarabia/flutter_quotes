@@ -9,8 +9,8 @@ abstract class RegisterModule {
 
   ApiClient get client {
     return ApiClient(
-      baseUrl: '',
-      headers: {},
+      baseUrl: 'https://zenquotes.io/api/',
+      headers: {'Accept': 'application/json'},
     );
   }
 }
