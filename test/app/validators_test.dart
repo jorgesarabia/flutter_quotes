@@ -1,5 +1,6 @@
 import 'package:flutter_quotes/app/domain/email_address.dart';
 import 'package:flutter_quotes/app/domain/is_required.dart';
+import 'package:flutter_quotes/app/domain/password.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -26,5 +27,13 @@ void main() {
     expect(IsRequired('valid').message, isNull);
     expect(IsRequired('').message, 'Este valor es requerido');
     expect(IsRequired('valid').toString(), 'valid');
+  });
+
+  test('password validator', () {
+    expect(Password('').isValid, isFalse);
+
+    // expect(Password('valid').message, isNull);
+    // expect(Password('').message, 'Este valor es requerido');
+    // expect(Password('valid').toString(), 'valid');
   });
 }
