@@ -30,10 +30,17 @@ void main() {
   });
 
   test('password validator', () {
-    expect(Password('').isValid, isFalse);
+    expect(Password('admin123').isValid, isFalse);
+    expect(Password('Admin').isValid, isFalse);
+    expect(Password('Aa1').isValid, isFalse);
 
-    // expect(Password('valid').message, isNull);
-    // expect(Password('').message, 'Este valor es requerido');
-    // expect(Password('valid').toString(), 'valid');
+    expect(Password('AtLeast6').isValid, isTrue);
+
+    expect(Password('IsVal1d').message, isNull);
+    expect(
+      Password('invalid').message,
+      'Debe contener, al menos una minúscula, \nuna mayúscula, un número y más de 6 caracteres',
+    );
+    expect(Password('valid').toString(), 'valid');
   });
 }
