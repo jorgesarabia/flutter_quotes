@@ -37,6 +37,9 @@ Package | What it solves
 [dartz](https://pub.dev/packages/dartz) | Functional programming in Dart. The `Either` and `Option` classes are very useful when you use them with server calls
 [shared_preferences](https://pub.dev/packages/shared_preferences) | Wraps platform-specific persistent storage for simple data (NSUserDefaults on iOS and macOS, SharedPreferences on Android, etc.). |
 [google_fonts](https://pub.dev/packages/google_fonts) | The google_fonts package for Flutter allows you to easily use any of the thousands of fonts available from [fonts.google.com](https://fonts.google.com/) in your Flutter app. 
+[local_auth](https://pub.dev/packages/local_auth) | This Flutter plugin provides means to perform local, on-device authentication of the user.
+
+
 
 ### Technical debts
 This was a weekend project so there are some features that I was unable to add and it has some technical debts. I name some of them below
