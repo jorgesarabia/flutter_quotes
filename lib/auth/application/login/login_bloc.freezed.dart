@@ -18,8 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$LoginEventTearOff {
   const _$LoginEventTearOff();
 
-  _LoginBtnPressed logInBtnPressed() {
-    return const _LoginBtnPressed();
+  _InitializeLogin initializeLogin() {
+    return const _InitializeLogin();
   }
 
   _EmailChange emailChanged(String email) {
@@ -34,8 +34,12 @@ class _$LoginEventTearOff {
     );
   }
 
-  _InitializeLogin initializeLogin() {
-    return const _InitializeLogin();
+  _LoginWithEmailAndPasswordPressed loginWithEmailAndPasswordPressed() {
+    return const _LoginWithEmailAndPasswordPressed();
+  }
+
+  _LoginWithBiometricsPressed loginWithBiometricsPressed() {
+    return const _LoginWithBiometricsPressed();
   }
 }
 
@@ -46,51 +50,63 @@ const $LoginEvent = _$LoginEventTearOff();
 mixin _$LoginEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() logInBtnPressed,
+    required TResult Function() initializeLogin,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() initializeLogin,
+    required TResult Function() loginWithEmailAndPasswordPressed,
+    required TResult Function() loginWithBiometricsPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginBtnPressed value) logInBtnPressed,
+    required TResult Function(_InitializeLogin value) initializeLogin,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
-    required TResult Function(_InitializeLogin value) initializeLogin,
+    required TResult Function(_LoginWithEmailAndPasswordPressed value)
+        loginWithEmailAndPasswordPressed,
+    required TResult Function(_LoginWithBiometricsPressed value)
+        loginWithBiometricsPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,38 +129,38 @@ class _$LoginEventCopyWithImpl<$Res> implements $LoginEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LoginBtnPressedCopyWith<$Res> {
-  factory _$LoginBtnPressedCopyWith(
-          _LoginBtnPressed value, $Res Function(_LoginBtnPressed) then) =
-      __$LoginBtnPressedCopyWithImpl<$Res>;
+abstract class _$InitializeLoginCopyWith<$Res> {
+  factory _$InitializeLoginCopyWith(
+          _InitializeLogin value, $Res Function(_InitializeLogin) then) =
+      __$InitializeLoginCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$LoginBtnPressedCopyWithImpl<$Res>
+class __$InitializeLoginCopyWithImpl<$Res>
     extends _$LoginEventCopyWithImpl<$Res>
-    implements _$LoginBtnPressedCopyWith<$Res> {
-  __$LoginBtnPressedCopyWithImpl(
-      _LoginBtnPressed _value, $Res Function(_LoginBtnPressed) _then)
-      : super(_value, (v) => _then(v as _LoginBtnPressed));
+    implements _$InitializeLoginCopyWith<$Res> {
+  __$InitializeLoginCopyWithImpl(
+      _InitializeLogin _value, $Res Function(_InitializeLogin) _then)
+      : super(_value, (v) => _then(v as _InitializeLogin));
 
   @override
-  _LoginBtnPressed get _value => super._value as _LoginBtnPressed;
+  _InitializeLogin get _value => super._value as _InitializeLogin;
 }
 
 /// @nodoc
 
-class _$_LoginBtnPressed implements _LoginBtnPressed {
-  const _$_LoginBtnPressed();
+class _$_InitializeLogin implements _InitializeLogin {
+  const _$_InitializeLogin();
 
   @override
   String toString() {
-    return 'LoginEvent.logInBtnPressed()';
+    return 'LoginEvent.initializeLogin()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _LoginBtnPressed);
+        (other.runtimeType == runtimeType && other is _InitializeLogin);
   }
 
   @override
@@ -153,36 +169,39 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() logInBtnPressed,
+    required TResult Function() initializeLogin,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() initializeLogin,
+    required TResult Function() loginWithEmailAndPasswordPressed,
+    required TResult Function() loginWithBiometricsPressed,
   }) {
-    return logInBtnPressed();
+    return initializeLogin();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
   }) {
-    return logInBtnPressed?.call();
+    return initializeLogin?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
-    if (logInBtnPressed != null) {
-      return logInBtnPressed();
+    if (initializeLogin != null) {
+      return initializeLogin();
     }
     return orElse();
   }
@@ -190,43 +209,52 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginBtnPressed value) logInBtnPressed,
+    required TResult Function(_InitializeLogin value) initializeLogin,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
-    required TResult Function(_InitializeLogin value) initializeLogin,
+    required TResult Function(_LoginWithEmailAndPasswordPressed value)
+        loginWithEmailAndPasswordPressed,
+    required TResult Function(_LoginWithBiometricsPressed value)
+        loginWithBiometricsPressed,
   }) {
-    return logInBtnPressed(this);
+    return initializeLogin(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
   }) {
-    return logInBtnPressed?.call(this);
+    return initializeLogin?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
-    if (logInBtnPressed != null) {
-      return logInBtnPressed(this);
+    if (initializeLogin != null) {
+      return initializeLogin(this);
     }
     return orElse();
   }
 }
 
-abstract class _LoginBtnPressed implements LoginEvent {
-  const factory _LoginBtnPressed() = _$_LoginBtnPressed;
+abstract class _InitializeLogin implements LoginEvent {
+  const factory _InitializeLogin() = _$_InitializeLogin;
 }
 
 /// @nodoc
@@ -293,10 +321,11 @@ class _$_EmailChange implements _EmailChange {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() logInBtnPressed,
+    required TResult Function() initializeLogin,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() initializeLogin,
+    required TResult Function() loginWithEmailAndPasswordPressed,
+    required TResult Function() loginWithBiometricsPressed,
   }) {
     return emailChanged(email);
   }
@@ -304,10 +333,11 @@ class _$_EmailChange implements _EmailChange {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
   }) {
     return emailChanged?.call(email);
   }
@@ -315,10 +345,11 @@ class _$_EmailChange implements _EmailChange {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -330,10 +361,13 @@ class _$_EmailChange implements _EmailChange {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginBtnPressed value) logInBtnPressed,
+    required TResult Function(_InitializeLogin value) initializeLogin,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
-    required TResult Function(_InitializeLogin value) initializeLogin,
+    required TResult Function(_LoginWithEmailAndPasswordPressed value)
+        loginWithEmailAndPasswordPressed,
+    required TResult Function(_LoginWithBiometricsPressed value)
+        loginWithBiometricsPressed,
   }) {
     return emailChanged(this);
   }
@@ -341,10 +375,13 @@ class _$_EmailChange implements _EmailChange {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
   }) {
     return emailChanged?.call(this);
   }
@@ -352,10 +389,13 @@ class _$_EmailChange implements _EmailChange {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -438,10 +478,11 @@ class _$_PasswordChange implements _PasswordChange {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() logInBtnPressed,
+    required TResult Function() initializeLogin,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() initializeLogin,
+    required TResult Function() loginWithEmailAndPasswordPressed,
+    required TResult Function() loginWithBiometricsPressed,
   }) {
     return passwordChanged(password);
   }
@@ -449,10 +490,11 @@ class _$_PasswordChange implements _PasswordChange {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
   }) {
     return passwordChanged?.call(password);
   }
@@ -460,10 +502,11 @@ class _$_PasswordChange implements _PasswordChange {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -475,10 +518,13 @@ class _$_PasswordChange implements _PasswordChange {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginBtnPressed value) logInBtnPressed,
+    required TResult Function(_InitializeLogin value) initializeLogin,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
-    required TResult Function(_InitializeLogin value) initializeLogin,
+    required TResult Function(_LoginWithEmailAndPasswordPressed value)
+        loginWithEmailAndPasswordPressed,
+    required TResult Function(_LoginWithBiometricsPressed value)
+        loginWithBiometricsPressed,
   }) {
     return passwordChanged(this);
   }
@@ -486,10 +532,13 @@ class _$_PasswordChange implements _PasswordChange {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
   }) {
     return passwordChanged?.call(this);
   }
@@ -497,10 +546,13 @@ class _$_PasswordChange implements _PasswordChange {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -520,38 +572,43 @@ abstract class _PasswordChange implements LoginEvent {
 }
 
 /// @nodoc
-abstract class _$InitializeLoginCopyWith<$Res> {
-  factory _$InitializeLoginCopyWith(
-          _InitializeLogin value, $Res Function(_InitializeLogin) then) =
-      __$InitializeLoginCopyWithImpl<$Res>;
+abstract class _$LoginWithEmailAndPasswordPressedCopyWith<$Res> {
+  factory _$LoginWithEmailAndPasswordPressedCopyWith(
+          _LoginWithEmailAndPasswordPressed value,
+          $Res Function(_LoginWithEmailAndPasswordPressed) then) =
+      __$LoginWithEmailAndPasswordPressedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitializeLoginCopyWithImpl<$Res>
+class __$LoginWithEmailAndPasswordPressedCopyWithImpl<$Res>
     extends _$LoginEventCopyWithImpl<$Res>
-    implements _$InitializeLoginCopyWith<$Res> {
-  __$InitializeLoginCopyWithImpl(
-      _InitializeLogin _value, $Res Function(_InitializeLogin) _then)
-      : super(_value, (v) => _then(v as _InitializeLogin));
+    implements _$LoginWithEmailAndPasswordPressedCopyWith<$Res> {
+  __$LoginWithEmailAndPasswordPressedCopyWithImpl(
+      _LoginWithEmailAndPasswordPressed _value,
+      $Res Function(_LoginWithEmailAndPasswordPressed) _then)
+      : super(_value, (v) => _then(v as _LoginWithEmailAndPasswordPressed));
 
   @override
-  _InitializeLogin get _value => super._value as _InitializeLogin;
+  _LoginWithEmailAndPasswordPressed get _value =>
+      super._value as _LoginWithEmailAndPasswordPressed;
 }
 
 /// @nodoc
 
-class _$_InitializeLogin implements _InitializeLogin {
-  const _$_InitializeLogin();
+class _$_LoginWithEmailAndPasswordPressed
+    implements _LoginWithEmailAndPasswordPressed {
+  const _$_LoginWithEmailAndPasswordPressed();
 
   @override
   String toString() {
-    return 'LoginEvent.initializeLogin()';
+    return 'LoginEvent.loginWithEmailAndPasswordPressed()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _InitializeLogin);
+        (other.runtimeType == runtimeType &&
+            other is _LoginWithEmailAndPasswordPressed);
   }
 
   @override
@@ -560,36 +617,39 @@ class _$_InitializeLogin implements _InitializeLogin {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() logInBtnPressed,
+    required TResult Function() initializeLogin,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
-    required TResult Function() initializeLogin,
+    required TResult Function() loginWithEmailAndPasswordPressed,
+    required TResult Function() loginWithBiometricsPressed,
   }) {
-    return initializeLogin();
+    return loginWithEmailAndPasswordPressed();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
   }) {
-    return initializeLogin?.call();
+    return loginWithEmailAndPasswordPressed?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? logInBtnPressed,
+    TResult Function()? initializeLogin,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
-    TResult Function()? initializeLogin,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
-    if (initializeLogin != null) {
-      return initializeLogin();
+    if (loginWithEmailAndPasswordPressed != null) {
+      return loginWithEmailAndPasswordPressed();
     }
     return orElse();
   }
@@ -597,43 +657,185 @@ class _$_InitializeLogin implements _InitializeLogin {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginBtnPressed value) logInBtnPressed,
+    required TResult Function(_InitializeLogin value) initializeLogin,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
-    required TResult Function(_InitializeLogin value) initializeLogin,
+    required TResult Function(_LoginWithEmailAndPasswordPressed value)
+        loginWithEmailAndPasswordPressed,
+    required TResult Function(_LoginWithBiometricsPressed value)
+        loginWithBiometricsPressed,
   }) {
-    return initializeLogin(this);
+    return loginWithEmailAndPasswordPressed(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
   }) {
-    return initializeLogin?.call(this);
+    return loginWithEmailAndPasswordPressed?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
-    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
     required TResult orElse(),
   }) {
-    if (initializeLogin != null) {
-      return initializeLogin(this);
+    if (loginWithEmailAndPasswordPressed != null) {
+      return loginWithEmailAndPasswordPressed(this);
     }
     return orElse();
   }
 }
 
-abstract class _InitializeLogin implements LoginEvent {
-  const factory _InitializeLogin() = _$_InitializeLogin;
+abstract class _LoginWithEmailAndPasswordPressed implements LoginEvent {
+  const factory _LoginWithEmailAndPasswordPressed() =
+      _$_LoginWithEmailAndPasswordPressed;
+}
+
+/// @nodoc
+abstract class _$LoginWithBiometricsPressedCopyWith<$Res> {
+  factory _$LoginWithBiometricsPressedCopyWith(
+          _LoginWithBiometricsPressed value,
+          $Res Function(_LoginWithBiometricsPressed) then) =
+      __$LoginWithBiometricsPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$LoginWithBiometricsPressedCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res>
+    implements _$LoginWithBiometricsPressedCopyWith<$Res> {
+  __$LoginWithBiometricsPressedCopyWithImpl(_LoginWithBiometricsPressed _value,
+      $Res Function(_LoginWithBiometricsPressed) _then)
+      : super(_value, (v) => _then(v as _LoginWithBiometricsPressed));
+
+  @override
+  _LoginWithBiometricsPressed get _value =>
+      super._value as _LoginWithBiometricsPressed;
+}
+
+/// @nodoc
+
+class _$_LoginWithBiometricsPressed implements _LoginWithBiometricsPressed {
+  const _$_LoginWithBiometricsPressed();
+
+  @override
+  String toString() {
+    return 'LoginEvent.loginWithBiometricsPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _LoginWithBiometricsPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializeLogin,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function() loginWithEmailAndPasswordPressed,
+    required TResult Function() loginWithBiometricsPressed,
+  }) {
+    return loginWithBiometricsPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initializeLogin,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
+  }) {
+    return loginWithBiometricsPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializeLogin,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? loginWithEmailAndPasswordPressed,
+    TResult Function()? loginWithBiometricsPressed,
+    required TResult orElse(),
+  }) {
+    if (loginWithBiometricsPressed != null) {
+      return loginWithBiometricsPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitializeLogin value) initializeLogin,
+    required TResult Function(_EmailChange value) emailChanged,
+    required TResult Function(_PasswordChange value) passwordChanged,
+    required TResult Function(_LoginWithEmailAndPasswordPressed value)
+        loginWithEmailAndPasswordPressed,
+    required TResult Function(_LoginWithBiometricsPressed value)
+        loginWithBiometricsPressed,
+  }) {
+    return loginWithBiometricsPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_EmailChange value)? emailChanged,
+    TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
+  }) {
+    return loginWithBiometricsPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitializeLogin value)? initializeLogin,
+    TResult Function(_EmailChange value)? emailChanged,
+    TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_LoginWithEmailAndPasswordPressed value)?
+        loginWithEmailAndPasswordPressed,
+    TResult Function(_LoginWithBiometricsPressed value)?
+        loginWithBiometricsPressed,
+    required TResult orElse(),
+  }) {
+    if (loginWithBiometricsPressed != null) {
+      return loginWithBiometricsPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoginWithBiometricsPressed implements LoginEvent {
+  const factory _LoginWithBiometricsPressed() = _$_LoginWithBiometricsPressed;
 }
 
 /// @nodoc

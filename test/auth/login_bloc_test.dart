@@ -97,8 +97,8 @@ void main() {
 
     loginBloc.add(const LoginEvent.passwordChanged(_mockPassword));
     loginBloc.add(const LoginEvent.emailChanged('Invalid'));
-    loginBloc.add(const LoginEvent.logInBtnPressed());
+    loginBloc.add(const LoginEvent.loginWithEmailAndPasswordPressed());
     loginBloc.add(const LoginEvent.emailChanged(_email));
-    loginBloc.add(const LoginEvent.logInBtnPressed());
+    loginBloc.add(const LoginEvent.loginWithEmailAndPasswordPressed());
   });
 }

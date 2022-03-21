@@ -6,6 +6,7 @@ import 'package:flutter_quotes/app/infrastructure/local_storage.dart';
 import 'package:flutter_quotes/auth/domain/auth_failure.dart';
 import 'package:flutter_quotes/auth/infrastructure/auth_api.dart';
 import 'package:flutter_quotes/auth/infrastructure/auth_repository.dart';
+import 'package:flutter_quotes/auth/infrastructure/biometrics_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -13,10 +14,11 @@ import 'package:stokkur_api_client/stokkur_api_client.dart';
 
 import 'auth_repository_test.mocks.dart';
 
-@GenerateMocks([LocalStorage, AuthApi])
+@GenerateMocks([LocalStorage, AuthApi, BiometricsRepository])
 void main() {
   late final LocalStorage localStorage;
   late final AuthRepository authRepository;
+  late final BiometricsRepository biometricAuth;
   late final AuthApi authApi;
 
   const _email = 'admin@admin.com';
@@ -25,7 +27,8 @@ void main() {
   setUpAll(() {
     localStorage = MockLocalStorage();
     authApi = MockAuthApi();
-    authRepository = AuthRepository(localStorage, authApi);
+    biometricAuth = MockBiometricsRepository();
+    authRepository = AuthRepository(localStorage, authApi, biometricAuth);
   });
 
   test('signInWithEmailAndPassword login success', () async {

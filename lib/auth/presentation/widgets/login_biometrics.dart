@@ -14,7 +14,11 @@ class LoginBiometrics extends StatelessWidget {
       child: BlocBuilder<LoginBloc, LoginState>(builder: (context, state) {
         return AppButton(
           label: 'Biometrics/Patrón',
-          onPressed: state.deviceSupportsBiometrics ? () {} : null,
+          onPressed: state.deviceSupportsBiometrics
+              ? () {
+                  context.read<LoginBloc>().add(const LoginEvent.loginWithBiometricsPressed());
+                }
+              : null,
         );
       }),
     );

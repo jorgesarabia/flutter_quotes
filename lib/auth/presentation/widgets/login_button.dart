@@ -48,7 +48,7 @@ class _LoginButtonState extends State<LoginButton> {
           onPressed: () {
             FocusScope.of(context).unfocus();
             if (!isSubmitting) {
-              context.read<LoginBloc>().add(const LoginEvent.logInBtnPressed());
+              context.read<LoginBloc>().add(const LoginEvent.loginWithEmailAndPasswordPressed());
             }
           },
         ),
