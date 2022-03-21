@@ -16,7 +16,7 @@ part 'login_bloc.freezed.dart';
 @injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc(this.authFacade) : super(LoginState.initial()) {
-    on<_LoginWithBiometricsPressed>(_mapLoginWithBiometricsPressedToState);
+    on<_LoginWithBiometrics>(_mapLoginWithBiometricsToState);
     on<_LoginWithEmailAndPasswordPressed>(_mapLoginWithEmailAndPasswordPressedToState);
     on<_InitializeLogin>(_mapInitializeLoginToState);
     on<_EmailChange>(_mapEmailChangeToState);
@@ -68,5 +68,5 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     }
   }
 
-  void _mapLoginWithBiometricsPressedToState(_LoginWithBiometricsPressed event, Emitter<LoginState> emit) {}
+  void _mapLoginWithBiometricsToState(_LoginWithBiometrics event, Emitter<LoginState> emit) {}
 }
