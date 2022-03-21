@@ -57,3 +57,5 @@ I need to refactor a function to achieve 100% code coverage
 
 After adding widget testing on some screens, this is what full coverage looks like
 
+![Screen Shot 2022-03-21 at 10 46 12](https://user-images.githubusercontent.com/6399992/159275387-5833f0cd-67da-4e62-80a6-5e5422da1094.png)
+
