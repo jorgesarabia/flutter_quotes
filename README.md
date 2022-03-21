@@ -46,3 +46,7 @@ This was a weekend project so there are some features that I was unable to add a
 :x: | Widget testing | I only carried out the unit tests, I lacked time to carry out more tests on the widgets 
 
 # Unit testing
+
+![Screen Shot 2022-03-21 at 10 42 33](https://user-images.githubusercontent.com/6399992/159273610-769a476b-8d48-48e6-a3f1-ff001faf25c4.png)
+
+
