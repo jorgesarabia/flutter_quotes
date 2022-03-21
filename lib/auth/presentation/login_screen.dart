@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_quotes/app/config/injectable.dart';
 import 'package:flutter_quotes/auth/application/login/login_bloc.dart';
+import 'package:flutter_quotes/auth/presentation/widgets/login_biometrics.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_button.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_form.dart';
 import 'package:flutter_quotes/auth/presentation/widgets/login_testing.dart';
@@ -12,7 +13,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<LoginBloc>(
-      create: (_) => getIt<LoginBloc>(),
+      create: (_) => getIt<LoginBloc>()..add(const LoginEvent.initializeLogin()),
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -32,6 +33,8 @@ class LoginScreen extends StatelessWidget {
                 LoginForm(),
                 SizedBox(height: 32.0),
                 LoginButton(),
+                SizedBox(height: 10),
+                LoginBiometrics(),
                 SizedBox(height: 32.0),
                 LoginTesting(),
               ],

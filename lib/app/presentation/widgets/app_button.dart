@@ -4,7 +4,7 @@ class AppButton extends StatelessWidget {
   const AppButton({
     Key? key,
     required this.label,
-    required this.onPressed,
+    this.onPressed,
   }) : super(key: key);
 
   final String label;
@@ -14,7 +14,6 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        onPrimary: Colors.black87,
         padding: const EdgeInsets.symmetric(horizontal: 10),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10)),

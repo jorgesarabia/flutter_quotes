@@ -6,6 +6,7 @@ class LoginState with _$LoginState {
     required EmailAddress emailAddress,
     required Password password,
     required bool isSubmitting,
+    required bool deviceSupportsBiometrics,
     required AutovalidateMode autovalidateMode,
     required Option<Either<AuthFailure, QuoteUser>> logginWasSuccessOption,
   }) = _LoginUserState;
@@ -15,6 +16,7 @@ class LoginState with _$LoginState {
       emailAddress: EmailAddress(''),
       password: Password(''),
       isSubmitting: false,
+      deviceSupportsBiometrics: false,
       autovalidateMode: AutovalidateMode.disabled,
       logginWasSuccessOption: none(),
     );

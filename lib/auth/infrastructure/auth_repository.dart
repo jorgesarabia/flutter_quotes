@@ -6,14 +6,16 @@ import 'package:flutter_quotes/app/domain/quote_user.dart';
 import 'package:flutter_quotes/auth/domain/auth_failure.dart';
 import 'package:flutter_quotes/auth/domain/i_auth_api.dart';
 import 'package:flutter_quotes/auth/domain/i_auth_facade.dart';
+import 'package:flutter_quotes/auth/domain/i_biometrics.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: IAuthFacade)
 class AuthRepository implements IAuthFacade {
-  const AuthRepository(this._localStorage, this._api);
+  const AuthRepository(this._localStorage, this._api, this._auth);
 
   final ILocalStorageFacade _localStorage;
   final IAuthApi _api;
+  final IBiometrics _auth;
 
   @override
   QuoteUser? getSignedInUser() => _localStorage.getUser();
@@ -49,4 +51,7 @@ class AuthRepository implements IAuthFacade {
 
   @override
   Future<void> signOut() async => await _localStorage.removeUser();
+
+  @override
+  Future<bool> canCheckBiometrics() => _auth.ceckBiometrics();
 }

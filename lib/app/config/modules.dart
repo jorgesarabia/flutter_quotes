@@ -1,4 +1,5 @@
 import 'package:injectable/injectable.dart';
+import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stokkur_api_client/stokkur_api_client.dart';
 
@@ -13,4 +14,6 @@ abstract class RegisterModule {
       headers: {'Accept': 'application/json'},
     );
   }
+
+  LocalAuthentication get localAuthentication => LocalAuthentication();
 }

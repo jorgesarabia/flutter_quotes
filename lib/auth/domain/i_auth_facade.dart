@@ -13,4 +13,6 @@ abstract class IAuthFacade {
   });
 
   Future<void> signOut();
+
+  Future<bool> canCheckBiometrics();
 }

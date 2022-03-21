@@ -33,6 +33,10 @@ class _$LoginEventTearOff {
       password,
     );
   }
+
+  _InitializeLogin initializeLogin() {
+    return const _InitializeLogin();
+  }
 }
 
 /// @nodoc
@@ -45,6 +49,7 @@ mixin _$LoginEvent {
     required TResult Function() logInBtnPressed,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
+    required TResult Function() initializeLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,6 +57,7 @@ mixin _$LoginEvent {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +65,7 @@ mixin _$LoginEvent {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -67,6 +74,7 @@ mixin _$LoginEvent {
     required TResult Function(_LoginBtnPressed value) logInBtnPressed,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
+    required TResult Function(_InitializeLogin value) initializeLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,6 +82,7 @@ mixin _$LoginEvent {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +90,7 @@ mixin _$LoginEvent {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,6 +156,7 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
     required TResult Function() logInBtnPressed,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
+    required TResult Function() initializeLogin,
   }) {
     return logInBtnPressed();
   }
@@ -156,6 +167,7 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
   }) {
     return logInBtnPressed?.call();
   }
@@ -166,6 +178,7 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
     required TResult orElse(),
   }) {
     if (logInBtnPressed != null) {
@@ -180,6 +193,7 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
     required TResult Function(_LoginBtnPressed value) logInBtnPressed,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
+    required TResult Function(_InitializeLogin value) initializeLogin,
   }) {
     return logInBtnPressed(this);
   }
@@ -190,6 +204,7 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
   }) {
     return logInBtnPressed?.call(this);
   }
@@ -200,6 +215,7 @@ class _$_LoginBtnPressed implements _LoginBtnPressed {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     required TResult orElse(),
   }) {
     if (logInBtnPressed != null) {
@@ -280,6 +296,7 @@ class _$_EmailChange implements _EmailChange {
     required TResult Function() logInBtnPressed,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
+    required TResult Function() initializeLogin,
   }) {
     return emailChanged(email);
   }
@@ -290,6 +307,7 @@ class _$_EmailChange implements _EmailChange {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
   }) {
     return emailChanged?.call(email);
   }
@@ -300,6 +318,7 @@ class _$_EmailChange implements _EmailChange {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -314,6 +333,7 @@ class _$_EmailChange implements _EmailChange {
     required TResult Function(_LoginBtnPressed value) logInBtnPressed,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
+    required TResult Function(_InitializeLogin value) initializeLogin,
   }) {
     return emailChanged(this);
   }
@@ -324,6 +344,7 @@ class _$_EmailChange implements _EmailChange {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
   }) {
     return emailChanged?.call(this);
   }
@@ -334,6 +355,7 @@ class _$_EmailChange implements _EmailChange {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -419,6 +441,7 @@ class _$_PasswordChange implements _PasswordChange {
     required TResult Function() logInBtnPressed,
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
+    required TResult Function() initializeLogin,
   }) {
     return passwordChanged(password);
   }
@@ -429,6 +452,7 @@ class _$_PasswordChange implements _PasswordChange {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
   }) {
     return passwordChanged?.call(password);
   }
@@ -439,6 +463,7 @@ class _$_PasswordChange implements _PasswordChange {
     TResult Function()? logInBtnPressed,
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -453,6 +478,7 @@ class _$_PasswordChange implements _PasswordChange {
     required TResult Function(_LoginBtnPressed value) logInBtnPressed,
     required TResult Function(_EmailChange value) emailChanged,
     required TResult Function(_PasswordChange value) passwordChanged,
+    required TResult Function(_InitializeLogin value) initializeLogin,
   }) {
     return passwordChanged(this);
   }
@@ -463,6 +489,7 @@ class _$_PasswordChange implements _PasswordChange {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
   }) {
     return passwordChanged?.call(this);
   }
@@ -473,6 +500,7 @@ class _$_PasswordChange implements _PasswordChange {
     TResult Function(_LoginBtnPressed value)? logInBtnPressed,
     TResult Function(_EmailChange value)? emailChanged,
     TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -492,6 +520,123 @@ abstract class _PasswordChange implements LoginEvent {
 }
 
 /// @nodoc
+abstract class _$InitializeLoginCopyWith<$Res> {
+  factory _$InitializeLoginCopyWith(
+          _InitializeLogin value, $Res Function(_InitializeLogin) then) =
+      __$InitializeLoginCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$InitializeLoginCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res>
+    implements _$InitializeLoginCopyWith<$Res> {
+  __$InitializeLoginCopyWithImpl(
+      _InitializeLogin _value, $Res Function(_InitializeLogin) _then)
+      : super(_value, (v) => _then(v as _InitializeLogin));
+
+  @override
+  _InitializeLogin get _value => super._value as _InitializeLogin;
+}
+
+/// @nodoc
+
+class _$_InitializeLogin implements _InitializeLogin {
+  const _$_InitializeLogin();
+
+  @override
+  String toString() {
+    return 'LoginEvent.initializeLogin()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _InitializeLogin);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() logInBtnPressed,
+    required TResult Function(String email) emailChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function() initializeLogin,
+  }) {
+    return initializeLogin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? logInBtnPressed,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
+  }) {
+    return initializeLogin?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? logInBtnPressed,
+    TResult Function(String email)? emailChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? initializeLogin,
+    required TResult orElse(),
+  }) {
+    if (initializeLogin != null) {
+      return initializeLogin();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoginBtnPressed value) logInBtnPressed,
+    required TResult Function(_EmailChange value) emailChanged,
+    required TResult Function(_PasswordChange value) passwordChanged,
+    required TResult Function(_InitializeLogin value) initializeLogin,
+  }) {
+    return initializeLogin(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_EmailChange value)? emailChanged,
+    TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
+  }) {
+    return initializeLogin?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoginBtnPressed value)? logInBtnPressed,
+    TResult Function(_EmailChange value)? emailChanged,
+    TResult Function(_PasswordChange value)? passwordChanged,
+    TResult Function(_InitializeLogin value)? initializeLogin,
+    required TResult orElse(),
+  }) {
+    if (initializeLogin != null) {
+      return initializeLogin(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InitializeLogin implements LoginEvent {
+  const factory _InitializeLogin() = _$_InitializeLogin;
+}
+
+/// @nodoc
 class _$LoginStateTearOff {
   const _$LoginStateTearOff();
 
@@ -499,12 +644,14 @@ class _$LoginStateTearOff {
       {required EmailAddress emailAddress,
       required Password password,
       required bool isSubmitting,
+      required bool deviceSupportsBiometrics,
       required AutovalidateMode autovalidateMode,
       required Option<Either<AuthFailure, QuoteUser>> logginWasSuccessOption}) {
     return _LoginUserState(
       emailAddress: emailAddress,
       password: password,
       isSubmitting: isSubmitting,
+      deviceSupportsBiometrics: deviceSupportsBiometrics,
       autovalidateMode: autovalidateMode,
       logginWasSuccessOption: logginWasSuccessOption,
     );
@@ -519,6 +666,7 @@ mixin _$LoginState {
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get deviceSupportsBiometrics => throw _privateConstructorUsedError;
   AutovalidateMode get autovalidateMode => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, QuoteUser>> get logginWasSuccessOption =>
       throw _privateConstructorUsedError;
@@ -537,6 +685,7 @@ abstract class $LoginStateCopyWith<$Res> {
       {EmailAddress emailAddress,
       Password password,
       bool isSubmitting,
+      bool deviceSupportsBiometrics,
       AutovalidateMode autovalidateMode,
       Option<Either<AuthFailure, QuoteUser>> logginWasSuccessOption});
 }
@@ -554,6 +703,7 @@ class _$LoginStateCopyWithImpl<$Res> implements $LoginStateCopyWith<$Res> {
     Object? emailAddress = freezed,
     Object? password = freezed,
     Object? isSubmitting = freezed,
+    Object? deviceSupportsBiometrics = freezed,
     Object? autovalidateMode = freezed,
     Object? logginWasSuccessOption = freezed,
   }) {
@@ -569,6 +719,10 @@ class _$LoginStateCopyWithImpl<$Res> implements $LoginStateCopyWith<$Res> {
       isSubmitting: isSubmitting == freezed
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      deviceSupportsBiometrics: deviceSupportsBiometrics == freezed
+          ? _value.deviceSupportsBiometrics
+          : deviceSupportsBiometrics // ignore: cast_nullable_to_non_nullable
               as bool,
       autovalidateMode: autovalidateMode == freezed
           ? _value.autovalidateMode
@@ -593,6 +747,7 @@ abstract class _$LoginUserStateCopyWith<$Res>
       {EmailAddress emailAddress,
       Password password,
       bool isSubmitting,
+      bool deviceSupportsBiometrics,
       AutovalidateMode autovalidateMode,
       Option<Either<AuthFailure, QuoteUser>> logginWasSuccessOption});
 }
@@ -612,6 +767,7 @@ class __$LoginUserStateCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
     Object? emailAddress = freezed,
     Object? password = freezed,
     Object? isSubmitting = freezed,
+    Object? deviceSupportsBiometrics = freezed,
     Object? autovalidateMode = freezed,
     Object? logginWasSuccessOption = freezed,
   }) {
@@ -627,6 +783,10 @@ class __$LoginUserStateCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
       isSubmitting: isSubmitting == freezed
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      deviceSupportsBiometrics: deviceSupportsBiometrics == freezed
+          ? _value.deviceSupportsBiometrics
+          : deviceSupportsBiometrics // ignore: cast_nullable_to_non_nullable
               as bool,
       autovalidateMode: autovalidateMode == freezed
           ? _value.autovalidateMode
@@ -647,6 +807,7 @@ class _$_LoginUserState implements _LoginUserState {
       {required this.emailAddress,
       required this.password,
       required this.isSubmitting,
+      required this.deviceSupportsBiometrics,
       required this.autovalidateMode,
       required this.logginWasSuccessOption});
 
@@ -657,13 +818,15 @@ class _$_LoginUserState implements _LoginUserState {
   @override
   final bool isSubmitting;
   @override
+  final bool deviceSupportsBiometrics;
+  @override
   final AutovalidateMode autovalidateMode;
   @override
   final Option<Either<AuthFailure, QuoteUser>> logginWasSuccessOption;
 
   @override
   String toString() {
-    return 'LoginState(emailAddress: $emailAddress, password: $password, isSubmitting: $isSubmitting, autovalidateMode: $autovalidateMode, logginWasSuccessOption: $logginWasSuccessOption)';
+    return 'LoginState(emailAddress: $emailAddress, password: $password, isSubmitting: $isSubmitting, deviceSupportsBiometrics: $deviceSupportsBiometrics, autovalidateMode: $autovalidateMode, logginWasSuccessOption: $logginWasSuccessOption)';
   }
 
   @override
@@ -676,6 +839,8 @@ class _$_LoginUserState implements _LoginUserState {
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality()
                 .equals(other.isSubmitting, isSubmitting) &&
+            const DeepCollectionEquality().equals(
+                other.deviceSupportsBiometrics, deviceSupportsBiometrics) &&
             const DeepCollectionEquality()
                 .equals(other.autovalidateMode, autovalidateMode) &&
             const DeepCollectionEquality()
@@ -688,6 +853,7 @@ class _$_LoginUserState implements _LoginUserState {
       const DeepCollectionEquality().hash(emailAddress),
       const DeepCollectionEquality().hash(password),
       const DeepCollectionEquality().hash(isSubmitting),
+      const DeepCollectionEquality().hash(deviceSupportsBiometrics),
       const DeepCollectionEquality().hash(autovalidateMode),
       const DeepCollectionEquality().hash(logginWasSuccessOption));
 
@@ -702,6 +868,7 @@ abstract class _LoginUserState implements LoginState {
       {required EmailAddress emailAddress,
       required Password password,
       required bool isSubmitting,
+      required bool deviceSupportsBiometrics,
       required AutovalidateMode autovalidateMode,
       required Option<Either<AuthFailure, QuoteUser>>
           logginWasSuccessOption}) = _$_LoginUserState;
@@ -712,6 +879,8 @@ abstract class _LoginUserState implements LoginState {
   Password get password;
   @override
   bool get isSubmitting;
+  @override
+  bool get deviceSupportsBiometrics;
   @override
   AutovalidateMode get autovalidateMode;
   @override
