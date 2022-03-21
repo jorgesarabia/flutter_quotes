@@ -31,9 +31,9 @@ class AuthRepository implements IAuthFacade {
     );
 
     return response.map(
-      success: (success) {
+      success: (success) async {
         final user = success.data;
-        _localStorage.saveUser(user);
+        await _localStorage.saveUser(user);
 
         return optionOf(right(user));
       },
@@ -54,4 +54,18 @@ class AuthRepository implements IAuthFacade {
 
   @override
   Future<bool> canCheckBiometrics() => _auth.ceckBiometrics();
+
+  @override
+  Future<Option<Either<AuthFailure, QuoteUser>>> signInWithBiometric() async {
+    final isAbleToLogin = await _auth.authenticate();
+
+    if (isAbleToLogin) {
+      final user = QuoteUser(email: 'default@email.com');
+      await _localStorage.saveUser(user);
+
+      return optionOf(right(user));
+    }
+
+    return none();
+  }
 }

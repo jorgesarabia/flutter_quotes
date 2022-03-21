@@ -9,5 +9,8 @@ class BiometricsRepository implements IBiometrics {
   final LocalAuthentication _auth;
 
   @override
-  Future<bool> ceckBiometrics() async => await _auth.canCheckBiometrics;
+  Future<bool> ceckBiometrics() => _auth.canCheckBiometrics;
+
+  @override
+  Future<bool> authenticate() => _auth.authenticate(localizedReason: 'Inicie sesión para ver la frase del día');
 }

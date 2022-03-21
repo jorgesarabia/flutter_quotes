@@ -68,5 +68,11 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     }
   }
 
-  void _mapLoginWithBiometricsToState(_LoginWithBiometrics event, Emitter<LoginState> emit) {}
+  void _mapLoginWithBiometricsToState(_LoginWithBiometrics event, Emitter<LoginState> emit) async {
+    emit(state.copyWith(logginWasSuccessOption: none()));
+
+    final loginResponse = await authFacade.signInWithBiometric();
+
+    emit(state.copyWith(logginWasSuccessOption: loginResponse));
+  }
 }

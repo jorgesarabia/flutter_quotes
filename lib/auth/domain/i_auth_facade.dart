@@ -15,4 +15,6 @@ abstract class IAuthFacade {
   Future<void> signOut();
 
   Future<bool> canCheckBiometrics();
+
+  Future<Option<Either<AuthFailure, QuoteUser>>> signInWithBiometric();
 }

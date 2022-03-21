@@ -38,10 +38,8 @@ class _$LoginEventTearOff {
     return const _LoginWithEmailAndPasswordPressed();
   }
 
-  _LoginWithBiometrics loginWithBiometrics(bool isLoggedIn) {
-    return _LoginWithBiometrics(
-      isLoggedIn,
-    );
+  _LoginWithBiometrics loginWithBiometrics() {
+    return const _LoginWithBiometrics();
   }
 }
 
@@ -56,7 +54,7 @@ mixin _$LoginEvent {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginWithEmailAndPasswordPressed,
-    required TResult Function(bool isLoggedIn) loginWithBiometrics,
+    required TResult Function() loginWithBiometrics,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,7 +63,7 @@ mixin _$LoginEvent {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,7 +72,7 @@ mixin _$LoginEvent {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -172,7 +170,7 @@ class _$_InitializeLogin implements _InitializeLogin {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginWithEmailAndPasswordPressed,
-    required TResult Function(bool isLoggedIn) loginWithBiometrics,
+    required TResult Function() loginWithBiometrics,
   }) {
     return initializeLogin();
   }
@@ -184,7 +182,7 @@ class _$_InitializeLogin implements _InitializeLogin {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
   }) {
     return initializeLogin?.call();
   }
@@ -196,7 +194,7 @@ class _$_InitializeLogin implements _InitializeLogin {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
     required TResult orElse(),
   }) {
     if (initializeLogin != null) {
@@ -321,7 +319,7 @@ class _$_EmailChange implements _EmailChange {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginWithEmailAndPasswordPressed,
-    required TResult Function(bool isLoggedIn) loginWithBiometrics,
+    required TResult Function() loginWithBiometrics,
   }) {
     return emailChanged(email);
   }
@@ -333,7 +331,7 @@ class _$_EmailChange implements _EmailChange {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
   }) {
     return emailChanged?.call(email);
   }
@@ -345,7 +343,7 @@ class _$_EmailChange implements _EmailChange {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -475,7 +473,7 @@ class _$_PasswordChange implements _PasswordChange {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginWithEmailAndPasswordPressed,
-    required TResult Function(bool isLoggedIn) loginWithBiometrics,
+    required TResult Function() loginWithBiometrics,
   }) {
     return passwordChanged(password);
   }
@@ -487,7 +485,7 @@ class _$_PasswordChange implements _PasswordChange {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
   }) {
     return passwordChanged?.call(password);
   }
@@ -499,7 +497,7 @@ class _$_PasswordChange implements _PasswordChange {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -611,7 +609,7 @@ class _$_LoginWithEmailAndPasswordPressed
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginWithEmailAndPasswordPressed,
-    required TResult Function(bool isLoggedIn) loginWithBiometrics,
+    required TResult Function() loginWithBiometrics,
   }) {
     return loginWithEmailAndPasswordPressed();
   }
@@ -623,7 +621,7 @@ class _$_LoginWithEmailAndPasswordPressed
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
   }) {
     return loginWithEmailAndPasswordPressed?.call();
   }
@@ -635,7 +633,7 @@ class _$_LoginWithEmailAndPasswordPressed
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
     required TResult orElse(),
   }) {
     if (loginWithEmailAndPasswordPressed != null) {
@@ -698,7 +696,6 @@ abstract class _$LoginWithBiometricsCopyWith<$Res> {
   factory _$LoginWithBiometricsCopyWith(_LoginWithBiometrics value,
           $Res Function(_LoginWithBiometrics) then) =
       __$LoginWithBiometricsCopyWithImpl<$Res>;
-  $Res call({bool isLoggedIn});
 }
 
 /// @nodoc
@@ -711,51 +708,26 @@ class __$LoginWithBiometricsCopyWithImpl<$Res>
 
   @override
   _LoginWithBiometrics get _value => super._value as _LoginWithBiometrics;
-
-  @override
-  $Res call({
-    Object? isLoggedIn = freezed,
-  }) {
-    return _then(_LoginWithBiometrics(
-      isLoggedIn == freezed
-          ? _value.isLoggedIn
-          : isLoggedIn // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$_LoginWithBiometrics implements _LoginWithBiometrics {
-  const _$_LoginWithBiometrics(this.isLoggedIn);
-
-  @override
-  final bool isLoggedIn;
+  const _$_LoginWithBiometrics();
 
   @override
   String toString() {
-    return 'LoginEvent.loginWithBiometrics(isLoggedIn: $isLoggedIn)';
+    return 'LoginEvent.loginWithBiometrics()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _LoginWithBiometrics &&
-            const DeepCollectionEquality()
-                .equals(other.isLoggedIn, isLoggedIn));
+        (other.runtimeType == runtimeType && other is _LoginWithBiometrics);
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(isLoggedIn));
-
-  @JsonKey(ignore: true)
-  @override
-  _$LoginWithBiometricsCopyWith<_LoginWithBiometrics> get copyWith =>
-      __$LoginWithBiometricsCopyWithImpl<_LoginWithBiometrics>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -764,9 +736,9 @@ class _$_LoginWithBiometrics implements _LoginWithBiometrics {
     required TResult Function(String email) emailChanged,
     required TResult Function(String password) passwordChanged,
     required TResult Function() loginWithEmailAndPasswordPressed,
-    required TResult Function(bool isLoggedIn) loginWithBiometrics,
+    required TResult Function() loginWithBiometrics,
   }) {
-    return loginWithBiometrics(isLoggedIn);
+    return loginWithBiometrics();
   }
 
   @override
@@ -776,9 +748,9 @@ class _$_LoginWithBiometrics implements _LoginWithBiometrics {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
   }) {
-    return loginWithBiometrics?.call(isLoggedIn);
+    return loginWithBiometrics?.call();
   }
 
   @override
@@ -788,11 +760,11 @@ class _$_LoginWithBiometrics implements _LoginWithBiometrics {
     TResult Function(String email)? emailChanged,
     TResult Function(String password)? passwordChanged,
     TResult Function()? loginWithEmailAndPasswordPressed,
-    TResult Function(bool isLoggedIn)? loginWithBiometrics,
+    TResult Function()? loginWithBiometrics,
     required TResult orElse(),
   }) {
     if (loginWithBiometrics != null) {
-      return loginWithBiometrics(isLoggedIn);
+      return loginWithBiometrics();
     }
     return orElse();
   }
@@ -842,12 +814,7 @@ class _$_LoginWithBiometrics implements _LoginWithBiometrics {
 }
 
 abstract class _LoginWithBiometrics implements LoginEvent {
-  const factory _LoginWithBiometrics(bool isLoggedIn) = _$_LoginWithBiometrics;
-
-  bool get isLoggedIn;
-  @JsonKey(ignore: true)
-  _$LoginWithBiometricsCopyWith<_LoginWithBiometrics> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _LoginWithBiometrics() = _$_LoginWithBiometrics;
 }
 
 /// @nodoc

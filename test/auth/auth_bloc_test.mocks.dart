@@ -52,4 +52,12 @@ class MockAuthRepository extends _i1.Mock implements _i3.AuthRepository {
   _i4.Future<bool> canCheckBiometrics() =>
       (super.noSuchMethod(Invocation.method(#canCheckBiometrics, []),
           returnValue: Future<bool>.value(false)) as _i4.Future<bool>);
+  @override
+  _i4.Future<_i2.Option<_i2.Either<_i5.AuthFailure, _i6.QuoteUser>>>
+      signInWithBiometric() => (super.noSuchMethod(
+          Invocation.method(#signInWithBiometric, []),
+          returnValue: Future<
+                  _i2.Option<_i2.Either<_i5.AuthFailure, _i6.QuoteUser>>>.value(
+              _FakeOption_0<_i2.Either<_i5.AuthFailure, _i6.QuoteUser>>())) as _i4
+          .Future<_i2.Option<_i2.Either<_i5.AuthFailure, _i6.QuoteUser>>>);
 }

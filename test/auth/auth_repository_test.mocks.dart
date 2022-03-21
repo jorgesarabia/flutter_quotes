@@ -75,4 +75,8 @@ class MockBiometricsRepository extends _i1.Mock
   _i4.Future<bool> ceckBiometrics() =>
       (super.noSuchMethod(Invocation.method(#ceckBiometrics, []),
           returnValue: Future<bool>.value(false)) as _i4.Future<bool>);
+  @override
+  _i4.Future<bool> authenticate() =>
+      (super.noSuchMethod(Invocation.method(#authenticate, []),
+          returnValue: Future<bool>.value(false)) as _i4.Future<bool>);
 }
