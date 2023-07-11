@@ -25,7 +25,7 @@ After successful login you will be able to see the quote of the day in the home 
 Each call to [ZenQuotes](https://zenquotes.io/api/) to get the today quote receives the same quote until the next day, so there is no need to call the server more than once a day. To avoid this, a cache has been implemented that only calls the server if necessary.
 
 # Technical aspects
-In this project, the DDD architecture was implemented and the BLoC pattern was used for state management. 
+In this project, the hexagonal architecture was implemented and the BLoC pattern was used for state management. 
 
 ### Packages
 Package | What it solves
