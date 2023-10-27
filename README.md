@@ -16,7 +16,7 @@ flutter run
 To use the application you must be logged in. You can get 3 types of response depending on the combination of password and email you enter
 
 - By email: `admin@admin.com` and password: `Admin123`, you will login successfully
-- By email: `repetido@admin.com` and any password, you will get the response: `email already in use`
+- By email: `repeated@admin.com` and any password, you will get the response: `email already in use`
 - By any email and any password, you will get the response: `email/password combination does not match`
 
 After successful login you will be able to see the quote of the day in the home screen.

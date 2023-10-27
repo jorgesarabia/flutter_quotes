@@ -42,7 +42,7 @@ class LoginForm extends StatelessWidget {
               ),
               const SizedBox(height: 10.0),
               AppTextForm(
-                hintText: 'Contraseña',
+                hintText: 'Password',
                 obscureText: true,
                 maxLines: 1,
                 onChanged: (input) {

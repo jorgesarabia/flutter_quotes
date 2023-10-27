@@ -23,7 +23,7 @@ void main() {
   });
 
   test('auth api login - badRequest', () async {
-    final result = await _login('repetido@admin.com', 'any');
+    final result = await _login('repeated@admin.com', 'any');
 
     expect(result, const TypeMatcher<ApiException>());
     expect((result as ApiException), const TypeMatcher<BadRequest>());

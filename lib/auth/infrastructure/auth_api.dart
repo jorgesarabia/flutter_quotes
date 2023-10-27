@@ -14,7 +14,7 @@ class AuthApi implements IAuthApi {
 
     if (email == 'admin@admin.com' && password == 'Admin123') {
       return ApiResult.success(data: QuoteUser(email: email));
-    } else if (email == 'repetido@admin.com') {
+    } else if (email == 'repeated@admin.com') {
       return const ApiResult.failure(error: ApiException.badRequest('email already in use'));
     }
 

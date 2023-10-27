@@ -44,7 +44,7 @@ class _LoginButtonState extends State<LoginButton> {
         key: const Key('default'),
         height: 50.0,
         child: AppButton(
-          label: 'Iniciar Sesión',
+          label: 'Login',
           onPressed: () {
             FocusScope.of(context).unfocus();
             if (!isSubmitting) {
