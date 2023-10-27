@@ -39,7 +39,7 @@ void main() {
     expect(Password('IsVal1d').message, isNull);
     expect(
       Password('invalid').message,
-      'Debe contener, al menos una minúscula, \nuna mayúscula, un número y más de 6 caracteres',
+      'It should contain at least one lowercase letter, \none uppercase letter, one number, \nand be longer than 6 characters.',
     );
     expect(Password('valid').toString(), 'valid');
   });

@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       create: (_) => getIt<QuotesBloc>()..add(const QuotesEvent.getQuoteOfTheDay()),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Frase del dia'),
+          title: const Text('Quote of the Day'),
           centerTitle: true,
           elevation: 0,
           actions: [
@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 return QuoteWidget(quote: state.quote!);
               }
 
-              return const Text('No hay frase del dia');
+              return const Text('There are no Quote of the Day');
             },
           ),
         ),
