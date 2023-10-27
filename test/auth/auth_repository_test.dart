@@ -1,4 +1,3 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter_quotes/app/domain/email_address.dart';
 import 'package:flutter_quotes/app/domain/password.dart';
 import 'package:flutter_quotes/app/domain/quote_user.dart';
@@ -21,8 +20,8 @@ void main() {
   late final BiometricsRepository biometricAuth;
   late final AuthApi authApi;
 
-  const _email = 'admin@admin.com';
-  const _password = 'mock';
+  const email = 'admin@admin.com';
+  const password = 'mock';
 
   setUpAll(() {
     localStorage = MockLocalStorage();
@@ -32,13 +31,13 @@ void main() {
   });
 
   test('signInWithEmailAndPassword login success', () async {
-    when(authApi.login(email: _email, password: _password)).thenAnswer((realInvocation) {
-      return Future.value(ApiResult.success(data: QuoteUser(email: _email)));
+    when(authApi.login(email: email, password: password)).thenAnswer((realInvocation) {
+      return Future.value(ApiResult.success(data: QuoteUser(email: email)));
     });
 
     final response = await authRepository.signInWithEmailAndPassword(
-      emailAddress: EmailAddress(_email),
-      password: Password(_password),
+      emailAddress: EmailAddress(email),
+      password: Password(password),
     );
 
     expect(response.isSome(), isTrue);
@@ -52,19 +51,19 @@ void main() {
     );
 
     expect(result, const TypeMatcher<QuoteUser>());
-    expect((result as QuoteUser).email, _email);
+    expect((result as QuoteUser).email, email);
   });
 
   test('signInWithEmailAndPassword login ', () async {
     const errorMessage = 'BadRequest';
 
-    when(authApi.login(email: _email, password: _password)).thenAnswer((realInvocation) {
+    when(authApi.login(email: email, password: password)).thenAnswer((realInvocation) {
       return Future.value(const ApiResult.failure(error: ApiException.badRequest(errorMessage)));
     });
 
     final response = await authRepository.signInWithEmailAndPassword(
-      emailAddress: EmailAddress(_email),
-      password: Password(_password),
+      emailAddress: EmailAddress(email),
+      password: Password(password),
     );
 
     expect(response.isSome(), isTrue);
@@ -85,13 +84,13 @@ void main() {
   test('signInWithEmailAndPassword login invalid combination', () async {
     const errorMessage = 'Forbidden';
 
-    when(authApi.login(email: _email, password: _password)).thenAnswer((realInvocation) {
+    when(authApi.login(email: email, password: password)).thenAnswer((realInvocation) {
       return Future.value(const ApiResult.failure(error: ApiException.forbidden(errorMessage)));
     });
 
     final response = await authRepository.signInWithEmailAndPassword(
-      emailAddress: EmailAddress(_email),
-      password: Password(_password),
+      emailAddress: EmailAddress(email),
+      password: Password(password),
     );
 
     expect(response.isSome(), isTrue);
@@ -112,13 +111,13 @@ void main() {
   test('signInWithEmailAndPassword login server error', () async {
     const errorMessage = 'other';
 
-    when(authApi.login(email: _email, password: _password)).thenAnswer((realInvocation) {
+    when(authApi.login(email: email, password: password)).thenAnswer((realInvocation) {
       return Future.value(const ApiResult.failure(error: ApiException.conflict(errorMessage)));
     });
 
     final response = await authRepository.signInWithEmailAndPassword(
-      emailAddress: EmailAddress(_email),
-      password: Password(_password),
+      emailAddress: EmailAddress(email),
+      password: Password(password),
     );
 
     expect(response.isSome(), isTrue);
@@ -142,8 +141,8 @@ void main() {
   });
 
   test('getSignedInUser returns QuoteUser', () {
-    when(localStorage.getUser()).thenReturn(QuoteUser(email: _email));
-    expect(authRepository.getSignedInUser()!.email, _email);
+    when(localStorage.getUser()).thenReturn(QuoteUser(email: email));
+    expect(authRepository.getSignedInUser()!.email, email);
   });
 
   test('removeUser was called', () async {

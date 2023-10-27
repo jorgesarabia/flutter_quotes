@@ -23,7 +23,7 @@ void main() {
     final quotesApi = QuoteApi(client, endpoints);
 
     when(endpoints.getQuoteOfTheDay).thenReturn('');
-    when(client.request<QuotesModel>(
+    when(client.request<QuotesModel, dynamic>(
       argThat(isNotNull),
       argThat(isNotNull),
       showGenericError: true,

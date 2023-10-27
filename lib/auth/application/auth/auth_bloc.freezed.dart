@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'auth_bloc.dart';
 
@@ -12,23 +12,7 @@ part of 'auth_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthEventTearOff {
-  const _$AuthEventTearOff();
-
-  _AppIsStarting appIsStarting() {
-    return const _AppIsStarting();
-  }
-
-  _SignOutPressed signOutPressed() {
-    return const _SignOutPressed();
-  }
-}
-
-/// @nodoc
-const $AuthEvent = _$AuthEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AuthEvent {
@@ -40,8 +24,8 @@ mixin _$AuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? appIsStarting,
-    TResult Function()? signOutPressed,
+    TResult? Function()? appIsStarting,
+    TResult? Function()? signOutPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,8 +43,8 @@ mixin _$AuthEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_AppIsStarting value)? appIsStarting,
-    TResult Function(_SignOutPressed value)? signOutPressed,
+    TResult? Function(_AppIsStarting value)? appIsStarting,
+    TResult? Function(_SignOutPressed value)? signOutPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,40 +59,40 @@ mixin _$AuthEvent {
 /// @nodoc
 abstract class $AuthEventCopyWith<$Res> {
   factory $AuthEventCopyWith(AuthEvent value, $Res Function(AuthEvent) then) =
-      _$AuthEventCopyWithImpl<$Res>;
+      _$AuthEventCopyWithImpl<$Res, AuthEvent>;
 }
 
 /// @nodoc
-class _$AuthEventCopyWithImpl<$Res> implements $AuthEventCopyWith<$Res> {
+class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
+    implements $AuthEventCopyWith<$Res> {
   _$AuthEventCopyWithImpl(this._value, this._then);
 
-  final AuthEvent _value;
   // ignore: unused_field
-  final $Res Function(AuthEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$AppIsStartingCopyWith<$Res> {
-  factory _$AppIsStartingCopyWith(
-          _AppIsStarting value, $Res Function(_AppIsStarting) then) =
-      __$AppIsStartingCopyWithImpl<$Res>;
+abstract class _$$AppIsStartingImplCopyWith<$Res> {
+  factory _$$AppIsStartingImplCopyWith(
+          _$AppIsStartingImpl value, $Res Function(_$AppIsStartingImpl) then) =
+      __$$AppIsStartingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$AppIsStartingCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
-    implements _$AppIsStartingCopyWith<$Res> {
-  __$AppIsStartingCopyWithImpl(
-      _AppIsStarting _value, $Res Function(_AppIsStarting) _then)
-      : super(_value, (v) => _then(v as _AppIsStarting));
-
-  @override
-  _AppIsStarting get _value => super._value as _AppIsStarting;
+class __$$AppIsStartingImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$AppIsStartingImpl>
+    implements _$$AppIsStartingImplCopyWith<$Res> {
+  __$$AppIsStartingImplCopyWithImpl(
+      _$AppIsStartingImpl _value, $Res Function(_$AppIsStartingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_AppIsStarting implements _AppIsStarting {
-  const _$_AppIsStarting();
+class _$AppIsStartingImpl implements _AppIsStarting {
+  const _$AppIsStartingImpl();
 
   @override
   String toString() {
@@ -118,7 +102,7 @@ class _$_AppIsStarting implements _AppIsStarting {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _AppIsStarting);
+        (other.runtimeType == runtimeType && other is _$AppIsStartingImpl);
   }
 
   @override
@@ -136,8 +120,8 @@ class _$_AppIsStarting implements _AppIsStarting {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? appIsStarting,
-    TResult Function()? signOutPressed,
+    TResult? Function()? appIsStarting,
+    TResult? Function()? signOutPressed,
   }) {
     return appIsStarting?.call();
   }
@@ -167,8 +151,8 @@ class _$_AppIsStarting implements _AppIsStarting {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_AppIsStarting value)? appIsStarting,
-    TResult Function(_SignOutPressed value)? signOutPressed,
+    TResult? Function(_AppIsStarting value)? appIsStarting,
+    TResult? Function(_SignOutPressed value)? signOutPressed,
   }) {
     return appIsStarting?.call(this);
   }
@@ -188,31 +172,29 @@ class _$_AppIsStarting implements _AppIsStarting {
 }
 
 abstract class _AppIsStarting implements AuthEvent {
-  const factory _AppIsStarting() = _$_AppIsStarting;
+  const factory _AppIsStarting() = _$AppIsStartingImpl;
 }
 
 /// @nodoc
-abstract class _$SignOutPressedCopyWith<$Res> {
-  factory _$SignOutPressedCopyWith(
-          _SignOutPressed value, $Res Function(_SignOutPressed) then) =
-      __$SignOutPressedCopyWithImpl<$Res>;
+abstract class _$$SignOutPressedImplCopyWith<$Res> {
+  factory _$$SignOutPressedImplCopyWith(_$SignOutPressedImpl value,
+          $Res Function(_$SignOutPressedImpl) then) =
+      __$$SignOutPressedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$SignOutPressedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
-    implements _$SignOutPressedCopyWith<$Res> {
-  __$SignOutPressedCopyWithImpl(
-      _SignOutPressed _value, $Res Function(_SignOutPressed) _then)
-      : super(_value, (v) => _then(v as _SignOutPressed));
-
-  @override
-  _SignOutPressed get _value => super._value as _SignOutPressed;
+class __$$SignOutPressedImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SignOutPressedImpl>
+    implements _$$SignOutPressedImplCopyWith<$Res> {
+  __$$SignOutPressedImplCopyWithImpl(
+      _$SignOutPressedImpl _value, $Res Function(_$SignOutPressedImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SignOutPressed implements _SignOutPressed {
-  const _$_SignOutPressed();
+class _$SignOutPressedImpl implements _SignOutPressed {
+  const _$SignOutPressedImpl();
 
   @override
   String toString() {
@@ -222,7 +204,7 @@ class _$_SignOutPressed implements _SignOutPressed {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _SignOutPressed);
+        (other.runtimeType == runtimeType && other is _$SignOutPressedImpl);
   }
 
   @override
@@ -240,8 +222,8 @@ class _$_SignOutPressed implements _SignOutPressed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? appIsStarting,
-    TResult Function()? signOutPressed,
+    TResult? Function()? appIsStarting,
+    TResult? Function()? signOutPressed,
   }) {
     return signOutPressed?.call();
   }
@@ -271,8 +253,8 @@ class _$_SignOutPressed implements _SignOutPressed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_AppIsStarting value)? appIsStarting,
-    TResult Function(_SignOutPressed value)? signOutPressed,
+    TResult? Function(_AppIsStarting value)? appIsStarting,
+    TResult? Function(_SignOutPressed value)? signOutPressed,
   }) {
     return signOutPressed?.call(this);
   }
@@ -292,30 +274,8 @@ class _$_SignOutPressed implements _SignOutPressed {
 }
 
 abstract class _SignOutPressed implements AuthEvent {
-  const factory _SignOutPressed() = _$_SignOutPressed;
+  const factory _SignOutPressed() = _$SignOutPressedImpl;
 }
-
-/// @nodoc
-class _$AuthStateTearOff {
-  const _$AuthStateTearOff();
-
-  InitialState initial() {
-    return const InitialState();
-  }
-
-  IsLoggedIn isLoggedIn(QuoteUser user) {
-    return IsLoggedIn(
-      user,
-    );
-  }
-
-  UserIsNotLoggedIn userIsNotLoggedIn() {
-    return const UserIsNotLoggedIn();
-  }
-}
-
-/// @nodoc
-const $AuthState = _$AuthStateTearOff();
 
 /// @nodoc
 mixin _$AuthState {
@@ -328,9 +288,9 @@ mixin _$AuthState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(QuoteUser user)? isLoggedIn,
-    TResult Function()? userIsNotLoggedIn,
+    TResult? Function()? initial,
+    TResult? Function(QuoteUser user)? isLoggedIn,
+    TResult? Function()? userIsNotLoggedIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -350,9 +310,9 @@ mixin _$AuthState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialState value)? initial,
-    TResult Function(IsLoggedIn value)? isLoggedIn,
-    TResult Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
+    TResult? Function(InitialState value)? initial,
+    TResult? Function(IsLoggedIn value)? isLoggedIn,
+    TResult? Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -368,40 +328,40 @@ mixin _$AuthState {
 /// @nodoc
 abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
-      _$AuthStateCopyWithImpl<$Res>;
+      _$AuthStateCopyWithImpl<$Res, AuthState>;
 }
 
 /// @nodoc
-class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
+class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
+    implements $AuthStateCopyWith<$Res> {
   _$AuthStateCopyWithImpl(this._value, this._then);
 
-  final AuthState _value;
   // ignore: unused_field
-  final $Res Function(AuthState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $InitialStateCopyWith<$Res> {
-  factory $InitialStateCopyWith(
-          InitialState value, $Res Function(InitialState) then) =
-      _$InitialStateCopyWithImpl<$Res>;
+abstract class _$$InitialStateImplCopyWith<$Res> {
+  factory _$$InitialStateImplCopyWith(
+          _$InitialStateImpl value, $Res Function(_$InitialStateImpl) then) =
+      __$$InitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitialStateCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
-    implements $InitialStateCopyWith<$Res> {
-  _$InitialStateCopyWithImpl(
-      InitialState _value, $Res Function(InitialState) _then)
-      : super(_value, (v) => _then(v as InitialState));
-
-  @override
-  InitialState get _value => super._value as InitialState;
+class __$$InitialStateImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$InitialStateImpl>
+    implements _$$InitialStateImplCopyWith<$Res> {
+  __$$InitialStateImplCopyWithImpl(
+      _$InitialStateImpl _value, $Res Function(_$InitialStateImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InitialState implements InitialState {
-  const _$InitialState();
+class _$InitialStateImpl implements InitialState {
+  const _$InitialStateImpl();
 
   @override
   String toString() {
@@ -411,7 +371,7 @@ class _$InitialState implements InitialState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is InitialState);
+        (other.runtimeType == runtimeType && other is _$InitialStateImpl);
   }
 
   @override
@@ -430,9 +390,9 @@ class _$InitialState implements InitialState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(QuoteUser user)? isLoggedIn,
-    TResult Function()? userIsNotLoggedIn,
+    TResult? Function()? initial,
+    TResult? Function(QuoteUser user)? isLoggedIn,
+    TResult? Function()? userIsNotLoggedIn,
   }) {
     return initial?.call();
   }
@@ -464,9 +424,9 @@ class _$InitialState implements InitialState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialState value)? initial,
-    TResult Function(IsLoggedIn value)? isLoggedIn,
-    TResult Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
+    TResult? Function(InitialState value)? initial,
+    TResult? Function(IsLoggedIn value)? isLoggedIn,
+    TResult? Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
   }) {
     return initial?.call(this);
   }
@@ -487,34 +447,35 @@ class _$InitialState implements InitialState {
 }
 
 abstract class InitialState implements AuthState {
-  const factory InitialState() = _$InitialState;
+  const factory InitialState() = _$InitialStateImpl;
 }
 
 /// @nodoc
-abstract class $IsLoggedInCopyWith<$Res> {
-  factory $IsLoggedInCopyWith(
-          IsLoggedIn value, $Res Function(IsLoggedIn) then) =
-      _$IsLoggedInCopyWithImpl<$Res>;
+abstract class _$$IsLoggedInImplCopyWith<$Res> {
+  factory _$$IsLoggedInImplCopyWith(
+          _$IsLoggedInImpl value, $Res Function(_$IsLoggedInImpl) then) =
+      __$$IsLoggedInImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({QuoteUser user});
 
   $QuoteUserCopyWith<$Res> get user;
 }
 
 /// @nodoc
-class _$IsLoggedInCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
-    implements $IsLoggedInCopyWith<$Res> {
-  _$IsLoggedInCopyWithImpl(IsLoggedIn _value, $Res Function(IsLoggedIn) _then)
-      : super(_value, (v) => _then(v as IsLoggedIn));
+class __$$IsLoggedInImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$IsLoggedInImpl>
+    implements _$$IsLoggedInImplCopyWith<$Res> {
+  __$$IsLoggedInImplCopyWithImpl(
+      _$IsLoggedInImpl _value, $Res Function(_$IsLoggedInImpl) _then)
+      : super(_value, _then);
 
-  @override
-  IsLoggedIn get _value => super._value as IsLoggedIn;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? user = freezed,
+    Object? user = null,
   }) {
-    return _then(IsLoggedIn(
-      user == freezed
+    return _then(_$IsLoggedInImpl(
+      null == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as QuoteUser,
@@ -522,6 +483,7 @@ class _$IsLoggedInCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuoteUserCopyWith<$Res> get user {
     return $QuoteUserCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
@@ -531,8 +493,8 @@ class _$IsLoggedInCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$IsLoggedIn implements IsLoggedIn {
-  const _$IsLoggedIn(this.user);
+class _$IsLoggedInImpl implements IsLoggedIn {
+  const _$IsLoggedInImpl(this.user);
 
   @override
   final QuoteUser user;
@@ -546,18 +508,18 @@ class _$IsLoggedIn implements IsLoggedIn {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is IsLoggedIn &&
-            const DeepCollectionEquality().equals(other.user, user));
+            other is _$IsLoggedInImpl &&
+            (identical(other.user, user) || other.user == user));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+  int get hashCode => Object.hash(runtimeType, user);
 
   @JsonKey(ignore: true)
   @override
-  $IsLoggedInCopyWith<IsLoggedIn> get copyWith =>
-      _$IsLoggedInCopyWithImpl<IsLoggedIn>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$IsLoggedInImplCopyWith<_$IsLoggedInImpl> get copyWith =>
+      __$$IsLoggedInImplCopyWithImpl<_$IsLoggedInImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -572,9 +534,9 @@ class _$IsLoggedIn implements IsLoggedIn {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(QuoteUser user)? isLoggedIn,
-    TResult Function()? userIsNotLoggedIn,
+    TResult? Function()? initial,
+    TResult? Function(QuoteUser user)? isLoggedIn,
+    TResult? Function()? userIsNotLoggedIn,
   }) {
     return isLoggedIn?.call(user);
   }
@@ -606,9 +568,9 @@ class _$IsLoggedIn implements IsLoggedIn {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialState value)? initial,
-    TResult Function(IsLoggedIn value)? isLoggedIn,
-    TResult Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
+    TResult? Function(InitialState value)? initial,
+    TResult? Function(IsLoggedIn value)? isLoggedIn,
+    TResult? Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
   }) {
     return isLoggedIn?.call(this);
   }
@@ -629,37 +591,34 @@ class _$IsLoggedIn implements IsLoggedIn {
 }
 
 abstract class IsLoggedIn implements AuthState {
-  const factory IsLoggedIn(QuoteUser user) = _$IsLoggedIn;
+  const factory IsLoggedIn(final QuoteUser user) = _$IsLoggedInImpl;
 
   QuoteUser get user;
   @JsonKey(ignore: true)
-  $IsLoggedInCopyWith<IsLoggedIn> get copyWith =>
+  _$$IsLoggedInImplCopyWith<_$IsLoggedInImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserIsNotLoggedInCopyWith<$Res> {
-  factory $UserIsNotLoggedInCopyWith(
-          UserIsNotLoggedIn value, $Res Function(UserIsNotLoggedIn) then) =
-      _$UserIsNotLoggedInCopyWithImpl<$Res>;
+abstract class _$$UserIsNotLoggedInImplCopyWith<$Res> {
+  factory _$$UserIsNotLoggedInImplCopyWith(_$UserIsNotLoggedInImpl value,
+          $Res Function(_$UserIsNotLoggedInImpl) then) =
+      __$$UserIsNotLoggedInImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UserIsNotLoggedInCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res>
-    implements $UserIsNotLoggedInCopyWith<$Res> {
-  _$UserIsNotLoggedInCopyWithImpl(
-      UserIsNotLoggedIn _value, $Res Function(UserIsNotLoggedIn) _then)
-      : super(_value, (v) => _then(v as UserIsNotLoggedIn));
-
-  @override
-  UserIsNotLoggedIn get _value => super._value as UserIsNotLoggedIn;
+class __$$UserIsNotLoggedInImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$UserIsNotLoggedInImpl>
+    implements _$$UserIsNotLoggedInImplCopyWith<$Res> {
+  __$$UserIsNotLoggedInImplCopyWithImpl(_$UserIsNotLoggedInImpl _value,
+      $Res Function(_$UserIsNotLoggedInImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
-  const _$UserIsNotLoggedIn();
+class _$UserIsNotLoggedInImpl implements UserIsNotLoggedIn {
+  const _$UserIsNotLoggedInImpl();
 
   @override
   String toString() {
@@ -669,7 +628,7 @@ class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UserIsNotLoggedIn);
+        (other.runtimeType == runtimeType && other is _$UserIsNotLoggedInImpl);
   }
 
   @override
@@ -688,9 +647,9 @@ class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(QuoteUser user)? isLoggedIn,
-    TResult Function()? userIsNotLoggedIn,
+    TResult? Function()? initial,
+    TResult? Function(QuoteUser user)? isLoggedIn,
+    TResult? Function()? userIsNotLoggedIn,
   }) {
     return userIsNotLoggedIn?.call();
   }
@@ -722,9 +681,9 @@ class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialState value)? initial,
-    TResult Function(IsLoggedIn value)? isLoggedIn,
-    TResult Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
+    TResult? Function(InitialState value)? initial,
+    TResult? Function(IsLoggedIn value)? isLoggedIn,
+    TResult? Function(UserIsNotLoggedIn value)? userIsNotLoggedIn,
   }) {
     return userIsNotLoggedIn?.call(this);
   }
@@ -745,5 +704,5 @@ class _$UserIsNotLoggedIn implements UserIsNotLoggedIn {
 }
 
 abstract class UserIsNotLoggedIn implements AuthState {
-  const factory UserIsNotLoggedIn() = _$UserIsNotLoggedIn;
+  const factory UserIsNotLoggedIn() = _$UserIsNotLoggedInImpl;
 }

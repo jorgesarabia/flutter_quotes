@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'auth_failure.dart';
 
@@ -12,38 +12,11 @@ part of 'auth_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthFailureTearOff {
-  const _$AuthFailureTearOff();
-
-  ServerError serverError(String message) {
-    return ServerError(
-      message,
-    );
-  }
-
-  InvalidCombination invalidCombination(String message) {
-    return InvalidCombination(
-      message,
-    );
-  }
-
-  EmailAlreadyInUse emailAlreadyInUse(String message) {
-    return EmailAlreadyInUse(
-      message,
-    );
-  }
-}
-
-/// @nodoc
-const $AuthFailure = _$AuthFailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$AuthFailure {
   String get message => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String message) serverError,
@@ -53,9 +26,9 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? serverError,
-    TResult Function(String message)? invalidCombination,
-    TResult Function(String message)? emailAlreadyInUse,
+    TResult? Function(String message)? serverError,
+    TResult? Function(String message)? invalidCombination,
+    TResult? Function(String message)? emailAlreadyInUse,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,9 +48,9 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServerError value)? serverError,
-    TResult Function(InvalidCombination value)? invalidCombination,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(InvalidCombination value)? invalidCombination,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,57 +71,61 @@ mixin _$AuthFailure {
 abstract class $AuthFailureCopyWith<$Res> {
   factory $AuthFailureCopyWith(
           AuthFailure value, $Res Function(AuthFailure) then) =
-      _$AuthFailureCopyWithImpl<$Res>;
+      _$AuthFailureCopyWithImpl<$Res, AuthFailure>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
+class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
+    implements $AuthFailureCopyWith<$Res> {
   _$AuthFailureCopyWithImpl(this._value, this._then);
 
-  final AuthFailure _value;
   // ignore: unused_field
-  final $Res Function(AuthFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_value.copyWith(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $ServerErrorCopyWith<$Res>
+abstract class _$$ServerErrorImplCopyWith<$Res>
     implements $AuthFailureCopyWith<$Res> {
-  factory $ServerErrorCopyWith(
-          ServerError value, $Res Function(ServerError) then) =
-      _$ServerErrorCopyWithImpl<$Res>;
+  factory _$$ServerErrorImplCopyWith(
+          _$ServerErrorImpl value, $Res Function(_$ServerErrorImpl) then) =
+      __$$ServerErrorImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$ServerErrorCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
-    implements $ServerErrorCopyWith<$Res> {
-  _$ServerErrorCopyWithImpl(
-      ServerError _value, $Res Function(ServerError) _then)
-      : super(_value, (v) => _then(v as ServerError));
+class __$$ServerErrorImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$ServerErrorImpl>
+    implements _$$ServerErrorImplCopyWith<$Res> {
+  __$$ServerErrorImplCopyWithImpl(
+      _$ServerErrorImpl _value, $Res Function(_$ServerErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ServerError get _value => super._value as ServerError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(ServerError(
-      message == freezed
+    return _then(_$ServerErrorImpl(
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -158,8 +135,8 @@ class _$ServerErrorCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ServerError implements ServerError {
-  const _$ServerError(this.message);
+class _$ServerErrorImpl implements ServerError {
+  const _$ServerErrorImpl(this.message);
 
   @override
   final String message;
@@ -173,18 +150,18 @@ class _$ServerError implements ServerError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ServerError &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$ServerErrorImpl &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  $ServerErrorCopyWith<ServerError> get copyWith =>
-      _$ServerErrorCopyWithImpl<ServerError>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
+      __$$ServerErrorImplCopyWithImpl<_$ServerErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -199,9 +176,9 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? serverError,
-    TResult Function(String message)? invalidCombination,
-    TResult Function(String message)? emailAlreadyInUse,
+    TResult? Function(String message)? serverError,
+    TResult? Function(String message)? invalidCombination,
+    TResult? Function(String message)? emailAlreadyInUse,
   }) {
     return serverError?.call(message);
   }
@@ -233,9 +210,9 @@ class _$ServerError implements ServerError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServerError value)? serverError,
-    TResult Function(InvalidCombination value)? invalidCombination,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(InvalidCombination value)? invalidCombination,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
   }) {
     return serverError?.call(this);
   }
@@ -256,43 +233,42 @@ class _$ServerError implements ServerError {
 }
 
 abstract class ServerError implements AuthFailure {
-  const factory ServerError(String message) = _$ServerError;
+  const factory ServerError(final String message) = _$ServerErrorImpl;
 
   @override
   String get message;
   @override
   @JsonKey(ignore: true)
-  $ServerErrorCopyWith<ServerError> get copyWith =>
+  _$$ServerErrorImplCopyWith<_$ServerErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $InvalidCombinationCopyWith<$Res>
+abstract class _$$InvalidCombinationImplCopyWith<$Res>
     implements $AuthFailureCopyWith<$Res> {
-  factory $InvalidCombinationCopyWith(
-          InvalidCombination value, $Res Function(InvalidCombination) then) =
-      _$InvalidCombinationCopyWithImpl<$Res>;
+  factory _$$InvalidCombinationImplCopyWith(_$InvalidCombinationImpl value,
+          $Res Function(_$InvalidCombinationImpl) then) =
+      __$$InvalidCombinationImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$InvalidCombinationCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $InvalidCombinationCopyWith<$Res> {
-  _$InvalidCombinationCopyWithImpl(
-      InvalidCombination _value, $Res Function(InvalidCombination) _then)
-      : super(_value, (v) => _then(v as InvalidCombination));
+class __$$InvalidCombinationImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$InvalidCombinationImpl>
+    implements _$$InvalidCombinationImplCopyWith<$Res> {
+  __$$InvalidCombinationImplCopyWithImpl(_$InvalidCombinationImpl _value,
+      $Res Function(_$InvalidCombinationImpl) _then)
+      : super(_value, _then);
 
-  @override
-  InvalidCombination get _value => super._value as InvalidCombination;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(InvalidCombination(
-      message == freezed
+    return _then(_$InvalidCombinationImpl(
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -302,8 +278,8 @@ class _$InvalidCombinationCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InvalidCombination implements InvalidCombination {
-  const _$InvalidCombination(this.message);
+class _$InvalidCombinationImpl implements InvalidCombination {
+  const _$InvalidCombinationImpl(this.message);
 
   @override
   final String message;
@@ -317,18 +293,19 @@ class _$InvalidCombination implements InvalidCombination {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is InvalidCombination &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$InvalidCombinationImpl &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  $InvalidCombinationCopyWith<InvalidCombination> get copyWith =>
-      _$InvalidCombinationCopyWithImpl<InvalidCombination>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InvalidCombinationImplCopyWith<_$InvalidCombinationImpl> get copyWith =>
+      __$$InvalidCombinationImplCopyWithImpl<_$InvalidCombinationImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -343,9 +320,9 @@ class _$InvalidCombination implements InvalidCombination {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? serverError,
-    TResult Function(String message)? invalidCombination,
-    TResult Function(String message)? emailAlreadyInUse,
+    TResult? Function(String message)? serverError,
+    TResult? Function(String message)? invalidCombination,
+    TResult? Function(String message)? emailAlreadyInUse,
   }) {
     return invalidCombination?.call(message);
   }
@@ -377,9 +354,9 @@ class _$InvalidCombination implements InvalidCombination {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServerError value)? serverError,
-    TResult Function(InvalidCombination value)? invalidCombination,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(InvalidCombination value)? invalidCombination,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
   }) {
     return invalidCombination?.call(this);
   }
@@ -400,43 +377,43 @@ class _$InvalidCombination implements InvalidCombination {
 }
 
 abstract class InvalidCombination implements AuthFailure {
-  const factory InvalidCombination(String message) = _$InvalidCombination;
+  const factory InvalidCombination(final String message) =
+      _$InvalidCombinationImpl;
 
   @override
   String get message;
   @override
   @JsonKey(ignore: true)
-  $InvalidCombinationCopyWith<InvalidCombination> get copyWith =>
+  _$$InvalidCombinationImplCopyWith<_$InvalidCombinationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmailAlreadyInUseCopyWith<$Res>
+abstract class _$$EmailAlreadyInUseImplCopyWith<$Res>
     implements $AuthFailureCopyWith<$Res> {
-  factory $EmailAlreadyInUseCopyWith(
-          EmailAlreadyInUse value, $Res Function(EmailAlreadyInUse) then) =
-      _$EmailAlreadyInUseCopyWithImpl<$Res>;
+  factory _$$EmailAlreadyInUseImplCopyWith(_$EmailAlreadyInUseImpl value,
+          $Res Function(_$EmailAlreadyInUseImpl) then) =
+      __$$EmailAlreadyInUseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$EmailAlreadyInUseCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $EmailAlreadyInUseCopyWith<$Res> {
-  _$EmailAlreadyInUseCopyWithImpl(
-      EmailAlreadyInUse _value, $Res Function(EmailAlreadyInUse) _then)
-      : super(_value, (v) => _then(v as EmailAlreadyInUse));
+class __$$EmailAlreadyInUseImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$EmailAlreadyInUseImpl>
+    implements _$$EmailAlreadyInUseImplCopyWith<$Res> {
+  __$$EmailAlreadyInUseImplCopyWithImpl(_$EmailAlreadyInUseImpl _value,
+      $Res Function(_$EmailAlreadyInUseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EmailAlreadyInUse get _value => super._value as EmailAlreadyInUse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(EmailAlreadyInUse(
-      message == freezed
+    return _then(_$EmailAlreadyInUseImpl(
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -446,8 +423,8 @@ class _$EmailAlreadyInUseCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EmailAlreadyInUse implements EmailAlreadyInUse {
-  const _$EmailAlreadyInUse(this.message);
+class _$EmailAlreadyInUseImpl implements EmailAlreadyInUse {
+  const _$EmailAlreadyInUseImpl(this.message);
 
   @override
   final String message;
@@ -461,18 +438,19 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is EmailAlreadyInUse &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$EmailAlreadyInUseImpl &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  $EmailAlreadyInUseCopyWith<EmailAlreadyInUse> get copyWith =>
-      _$EmailAlreadyInUseCopyWithImpl<EmailAlreadyInUse>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EmailAlreadyInUseImplCopyWith<_$EmailAlreadyInUseImpl> get copyWith =>
+      __$$EmailAlreadyInUseImplCopyWithImpl<_$EmailAlreadyInUseImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -487,9 +465,9 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? serverError,
-    TResult Function(String message)? invalidCombination,
-    TResult Function(String message)? emailAlreadyInUse,
+    TResult? Function(String message)? serverError,
+    TResult? Function(String message)? invalidCombination,
+    TResult? Function(String message)? emailAlreadyInUse,
   }) {
     return emailAlreadyInUse?.call(message);
   }
@@ -521,9 +499,9 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServerError value)? serverError,
-    TResult Function(InvalidCombination value)? invalidCombination,
-    TResult Function(EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult? Function(ServerError value)? serverError,
+    TResult? Function(InvalidCombination value)? invalidCombination,
+    TResult? Function(EmailAlreadyInUse value)? emailAlreadyInUse,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -544,12 +522,13 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
 }
 
 abstract class EmailAlreadyInUse implements AuthFailure {
-  const factory EmailAlreadyInUse(String message) = _$EmailAlreadyInUse;
+  const factory EmailAlreadyInUse(final String message) =
+      _$EmailAlreadyInUseImpl;
 
   @override
   String get message;
   @override
   @JsonKey(ignore: true)
-  $EmailAlreadyInUseCopyWith<EmailAlreadyInUse> get copyWith =>
+  _$$EmailAlreadyInUseImplCopyWith<_$EmailAlreadyInUseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

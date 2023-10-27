@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'quotes_bloc.dart';
 
@@ -12,26 +12,7 @@ part of 'quotes_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$QuotesStateTearOff {
-  const _$QuotesStateTearOff();
-
-  _QuotesState call(
-      {required bool isSubmitting,
-      required Option<Either<QuotesFailure, QuotesModel>> quoteOrFail,
-      QuotesModel? quote}) {
-    return _QuotesState(
-      isSubmitting: isSubmitting,
-      quoteOrFail: quoteOrFail,
-      quote: quote,
-    );
-  }
-}
-
-/// @nodoc
-const $QuotesState = _$QuotesStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$QuotesState {
@@ -49,7 +30,8 @@ mixin _$QuotesState {
 abstract class $QuotesStateCopyWith<$Res> {
   factory $QuotesStateCopyWith(
           QuotesState value, $Res Function(QuotesState) then) =
-      _$QuotesStateCopyWithImpl<$Res>;
+      _$QuotesStateCopyWithImpl<$Res, QuotesState>;
+  @useResult
   $Res call(
       {bool isSubmitting,
       Option<Either<QuotesFailure, QuotesModel>> quoteOrFail,
@@ -59,54 +41,59 @@ abstract class $QuotesStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$QuotesStateCopyWithImpl<$Res> implements $QuotesStateCopyWith<$Res> {
+class _$QuotesStateCopyWithImpl<$Res, $Val extends QuotesState>
+    implements $QuotesStateCopyWith<$Res> {
   _$QuotesStateCopyWithImpl(this._value, this._then);
 
-  final QuotesState _value;
   // ignore: unused_field
-  final $Res Function(QuotesState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isSubmitting = freezed,
-    Object? quoteOrFail = freezed,
+    Object? isSubmitting = null,
+    Object? quoteOrFail = null,
     Object? quote = freezed,
   }) {
     return _then(_value.copyWith(
-      isSubmitting: isSubmitting == freezed
+      isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
               as bool,
-      quoteOrFail: quoteOrFail == freezed
+      quoteOrFail: null == quoteOrFail
           ? _value.quoteOrFail
           : quoteOrFail // ignore: cast_nullable_to_non_nullable
               as Option<Either<QuotesFailure, QuotesModel>>,
-      quote: quote == freezed
+      quote: freezed == quote
           ? _value.quote
           : quote // ignore: cast_nullable_to_non_nullable
               as QuotesModel?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuotesModelCopyWith<$Res>? get quote {
     if (_value.quote == null) {
       return null;
     }
 
     return $QuotesModelCopyWith<$Res>(_value.quote!, (value) {
-      return _then(_value.copyWith(quote: value));
+      return _then(_value.copyWith(quote: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$QuotesStateCopyWith<$Res>
+abstract class _$$QuotesStateImplCopyWith<$Res>
     implements $QuotesStateCopyWith<$Res> {
-  factory _$QuotesStateCopyWith(
-          _QuotesState value, $Res Function(_QuotesState) then) =
-      __$QuotesStateCopyWithImpl<$Res>;
+  factory _$$QuotesStateImplCopyWith(
+          _$QuotesStateImpl value, $Res Function(_$QuotesStateImpl) then) =
+      __$$QuotesStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool isSubmitting,
       Option<Either<QuotesFailure, QuotesModel>> quoteOrFail,
@@ -117,31 +104,30 @@ abstract class _$QuotesStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$QuotesStateCopyWithImpl<$Res> extends _$QuotesStateCopyWithImpl<$Res>
-    implements _$QuotesStateCopyWith<$Res> {
-  __$QuotesStateCopyWithImpl(
-      _QuotesState _value, $Res Function(_QuotesState) _then)
-      : super(_value, (v) => _then(v as _QuotesState));
+class __$$QuotesStateImplCopyWithImpl<$Res>
+    extends _$QuotesStateCopyWithImpl<$Res, _$QuotesStateImpl>
+    implements _$$QuotesStateImplCopyWith<$Res> {
+  __$$QuotesStateImplCopyWithImpl(
+      _$QuotesStateImpl _value, $Res Function(_$QuotesStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _QuotesState get _value => super._value as _QuotesState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isSubmitting = freezed,
-    Object? quoteOrFail = freezed,
+    Object? isSubmitting = null,
+    Object? quoteOrFail = null,
     Object? quote = freezed,
   }) {
-    return _then(_QuotesState(
-      isSubmitting: isSubmitting == freezed
+    return _then(_$QuotesStateImpl(
+      isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
               as bool,
-      quoteOrFail: quoteOrFail == freezed
+      quoteOrFail: null == quoteOrFail
           ? _value.quoteOrFail
           : quoteOrFail // ignore: cast_nullable_to_non_nullable
               as Option<Either<QuotesFailure, QuotesModel>>,
-      quote: quote == freezed
+      quote: freezed == quote
           ? _value.quote
           : quote // ignore: cast_nullable_to_non_nullable
               as QuotesModel?,
@@ -151,8 +137,8 @@ class __$QuotesStateCopyWithImpl<$Res> extends _$QuotesStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_QuotesState implements _QuotesState {
-  const _$_QuotesState(
+class _$QuotesStateImpl implements _QuotesState {
+  const _$QuotesStateImpl(
       {required this.isSubmitting, required this.quoteOrFail, this.quote});
 
   @override
@@ -171,32 +157,30 @@ class _$_QuotesState implements _QuotesState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _QuotesState &&
-            const DeepCollectionEquality()
-                .equals(other.isSubmitting, isSubmitting) &&
-            const DeepCollectionEquality()
-                .equals(other.quoteOrFail, quoteOrFail) &&
-            const DeepCollectionEquality().equals(other.quote, quote));
+            other is _$QuotesStateImpl &&
+            (identical(other.isSubmitting, isSubmitting) ||
+                other.isSubmitting == isSubmitting) &&
+            (identical(other.quoteOrFail, quoteOrFail) ||
+                other.quoteOrFail == quoteOrFail) &&
+            (identical(other.quote, quote) || other.quote == quote));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(isSubmitting),
-      const DeepCollectionEquality().hash(quoteOrFail),
-      const DeepCollectionEquality().hash(quote));
+  int get hashCode =>
+      Object.hash(runtimeType, isSubmitting, quoteOrFail, quote);
 
   @JsonKey(ignore: true)
   @override
-  _$QuotesStateCopyWith<_QuotesState> get copyWith =>
-      __$QuotesStateCopyWithImpl<_QuotesState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$QuotesStateImplCopyWith<_$QuotesStateImpl> get copyWith =>
+      __$$QuotesStateImplCopyWithImpl<_$QuotesStateImpl>(this, _$identity);
 }
 
 abstract class _QuotesState implements QuotesState {
   const factory _QuotesState(
-      {required bool isSubmitting,
-      required Option<Either<QuotesFailure, QuotesModel>> quoteOrFail,
-      QuotesModel? quote}) = _$_QuotesState;
+      {required final bool isSubmitting,
+      required final Option<Either<QuotesFailure, QuotesModel>> quoteOrFail,
+      final QuotesModel? quote}) = _$QuotesStateImpl;
 
   @override
   bool get isSubmitting;
@@ -206,21 +190,9 @@ abstract class _QuotesState implements QuotesState {
   QuotesModel? get quote;
   @override
   @JsonKey(ignore: true)
-  _$QuotesStateCopyWith<_QuotesState> get copyWith =>
+  _$$QuotesStateImplCopyWith<_$QuotesStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$QuotesEventTearOff {
-  const _$QuotesEventTearOff();
-
-  _GetQuoteOfTheDay getQuoteOfTheDay() {
-    return const _GetQuoteOfTheDay();
-  }
-}
-
-/// @nodoc
-const $QuotesEvent = _$QuotesEventTearOff();
 
 /// @nodoc
 mixin _$QuotesEvent {
@@ -231,7 +203,7 @@ mixin _$QuotesEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? getQuoteOfTheDay,
+    TResult? Function()? getQuoteOfTheDay,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -247,7 +219,7 @@ mixin _$QuotesEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_GetQuoteOfTheDay value)? getQuoteOfTheDay,
+    TResult? Function(_GetQuoteOfTheDay value)? getQuoteOfTheDay,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -262,41 +234,40 @@ mixin _$QuotesEvent {
 abstract class $QuotesEventCopyWith<$Res> {
   factory $QuotesEventCopyWith(
           QuotesEvent value, $Res Function(QuotesEvent) then) =
-      _$QuotesEventCopyWithImpl<$Res>;
+      _$QuotesEventCopyWithImpl<$Res, QuotesEvent>;
 }
 
 /// @nodoc
-class _$QuotesEventCopyWithImpl<$Res> implements $QuotesEventCopyWith<$Res> {
+class _$QuotesEventCopyWithImpl<$Res, $Val extends QuotesEvent>
+    implements $QuotesEventCopyWith<$Res> {
   _$QuotesEventCopyWithImpl(this._value, this._then);
 
-  final QuotesEvent _value;
   // ignore: unused_field
-  final $Res Function(QuotesEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$GetQuoteOfTheDayCopyWith<$Res> {
-  factory _$GetQuoteOfTheDayCopyWith(
-          _GetQuoteOfTheDay value, $Res Function(_GetQuoteOfTheDay) then) =
-      __$GetQuoteOfTheDayCopyWithImpl<$Res>;
+abstract class _$$GetQuoteOfTheDayImplCopyWith<$Res> {
+  factory _$$GetQuoteOfTheDayImplCopyWith(_$GetQuoteOfTheDayImpl value,
+          $Res Function(_$GetQuoteOfTheDayImpl) then) =
+      __$$GetQuoteOfTheDayImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$GetQuoteOfTheDayCopyWithImpl<$Res>
-    extends _$QuotesEventCopyWithImpl<$Res>
-    implements _$GetQuoteOfTheDayCopyWith<$Res> {
-  __$GetQuoteOfTheDayCopyWithImpl(
-      _GetQuoteOfTheDay _value, $Res Function(_GetQuoteOfTheDay) _then)
-      : super(_value, (v) => _then(v as _GetQuoteOfTheDay));
-
-  @override
-  _GetQuoteOfTheDay get _value => super._value as _GetQuoteOfTheDay;
+class __$$GetQuoteOfTheDayImplCopyWithImpl<$Res>
+    extends _$QuotesEventCopyWithImpl<$Res, _$GetQuoteOfTheDayImpl>
+    implements _$$GetQuoteOfTheDayImplCopyWith<$Res> {
+  __$$GetQuoteOfTheDayImplCopyWithImpl(_$GetQuoteOfTheDayImpl _value,
+      $Res Function(_$GetQuoteOfTheDayImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_GetQuoteOfTheDay implements _GetQuoteOfTheDay {
-  const _$_GetQuoteOfTheDay();
+class _$GetQuoteOfTheDayImpl implements _GetQuoteOfTheDay {
+  const _$GetQuoteOfTheDayImpl();
 
   @override
   String toString() {
@@ -306,7 +277,7 @@ class _$_GetQuoteOfTheDay implements _GetQuoteOfTheDay {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _GetQuoteOfTheDay);
+        (other.runtimeType == runtimeType && other is _$GetQuoteOfTheDayImpl);
   }
 
   @override
@@ -323,7 +294,7 @@ class _$_GetQuoteOfTheDay implements _GetQuoteOfTheDay {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? getQuoteOfTheDay,
+    TResult? Function()? getQuoteOfTheDay,
   }) {
     return getQuoteOfTheDay?.call();
   }
@@ -351,7 +322,7 @@ class _$_GetQuoteOfTheDay implements _GetQuoteOfTheDay {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_GetQuoteOfTheDay value)? getQuoteOfTheDay,
+    TResult? Function(_GetQuoteOfTheDay value)? getQuoteOfTheDay,
   }) {
     return getQuoteOfTheDay?.call(this);
   }
@@ -370,5 +341,5 @@ class _$_GetQuoteOfTheDay implements _GetQuoteOfTheDay {
 }
 
 abstract class _GetQuoteOfTheDay implements QuotesEvent {
-  const factory _GetQuoteOfTheDay() = _$_GetQuoteOfTheDay;
+  const factory _GetQuoteOfTheDay() = _$GetQuoteOfTheDayImpl;
 }

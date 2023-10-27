@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'quotes_model.dart';
 
@@ -12,36 +12,11 @@ part of 'quotes_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 QuotesModel _$QuotesModelFromJson(Map<String, dynamic> json) {
   return _QuotesModel.fromJson(json);
 }
-
-/// @nodoc
-class _$QuotesModelTearOff {
-  const _$QuotesModelTearOff();
-
-  _QuotesModel call(
-      {@JsonKey(name: 'q') required String quote,
-      @JsonKey(name: 'a') required String author,
-      @JsonKey(name: 'h') required String htmlQuote,
-      @JsonKey(includeIfNull: false) required String? getTime}) {
-    return _QuotesModel(
-      quote: quote,
-      author: author,
-      htmlQuote: htmlQuote,
-      getTime: getTime,
-    );
-  }
-
-  QuotesModel fromJson(Map<String, Object?> json) {
-    return QuotesModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $QuotesModel = _$QuotesModelTearOff();
 
 /// @nodoc
 mixin _$QuotesModel {
@@ -64,7 +39,8 @@ mixin _$QuotesModel {
 abstract class $QuotesModelCopyWith<$Res> {
   factory $QuotesModelCopyWith(
           QuotesModel value, $Res Function(QuotesModel) then) =
-      _$QuotesModelCopyWithImpl<$Res>;
+      _$QuotesModelCopyWithImpl<$Res, QuotesModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'q') String quote,
       @JsonKey(name: 'a') String author,
@@ -73,48 +49,52 @@ abstract class $QuotesModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$QuotesModelCopyWithImpl<$Res> implements $QuotesModelCopyWith<$Res> {
+class _$QuotesModelCopyWithImpl<$Res, $Val extends QuotesModel>
+    implements $QuotesModelCopyWith<$Res> {
   _$QuotesModelCopyWithImpl(this._value, this._then);
 
-  final QuotesModel _value;
   // ignore: unused_field
-  final $Res Function(QuotesModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? quote = freezed,
-    Object? author = freezed,
-    Object? htmlQuote = freezed,
+    Object? quote = null,
+    Object? author = null,
+    Object? htmlQuote = null,
     Object? getTime = freezed,
   }) {
     return _then(_value.copyWith(
-      quote: quote == freezed
+      quote: null == quote
           ? _value.quote
           : quote // ignore: cast_nullable_to_non_nullable
               as String,
-      author: author == freezed
+      author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String,
-      htmlQuote: htmlQuote == freezed
+      htmlQuote: null == htmlQuote
           ? _value.htmlQuote
           : htmlQuote // ignore: cast_nullable_to_non_nullable
               as String,
-      getTime: getTime == freezed
+      getTime: freezed == getTime
           ? _value.getTime
           : getTime // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$QuotesModelCopyWith<$Res>
+abstract class _$$QuotesModelImplCopyWith<$Res>
     implements $QuotesModelCopyWith<$Res> {
-  factory _$QuotesModelCopyWith(
-          _QuotesModel value, $Res Function(_QuotesModel) then) =
-      __$QuotesModelCopyWithImpl<$Res>;
+  factory _$$QuotesModelImplCopyWith(
+          _$QuotesModelImpl value, $Res Function(_$QuotesModelImpl) then) =
+      __$$QuotesModelImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'q') String quote,
       @JsonKey(name: 'a') String author,
@@ -123,36 +103,35 @@ abstract class _$QuotesModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$QuotesModelCopyWithImpl<$Res> extends _$QuotesModelCopyWithImpl<$Res>
-    implements _$QuotesModelCopyWith<$Res> {
-  __$QuotesModelCopyWithImpl(
-      _QuotesModel _value, $Res Function(_QuotesModel) _then)
-      : super(_value, (v) => _then(v as _QuotesModel));
+class __$$QuotesModelImplCopyWithImpl<$Res>
+    extends _$QuotesModelCopyWithImpl<$Res, _$QuotesModelImpl>
+    implements _$$QuotesModelImplCopyWith<$Res> {
+  __$$QuotesModelImplCopyWithImpl(
+      _$QuotesModelImpl _value, $Res Function(_$QuotesModelImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _QuotesModel get _value => super._value as _QuotesModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? quote = freezed,
-    Object? author = freezed,
-    Object? htmlQuote = freezed,
+    Object? quote = null,
+    Object? author = null,
+    Object? htmlQuote = null,
     Object? getTime = freezed,
   }) {
-    return _then(_QuotesModel(
-      quote: quote == freezed
+    return _then(_$QuotesModelImpl(
+      quote: null == quote
           ? _value.quote
           : quote // ignore: cast_nullable_to_non_nullable
               as String,
-      author: author == freezed
+      author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String,
-      htmlQuote: htmlQuote == freezed
+      htmlQuote: null == htmlQuote
           ? _value.htmlQuote
           : htmlQuote // ignore: cast_nullable_to_non_nullable
               as String,
-      getTime: getTime == freezed
+      getTime: freezed == getTime
           ? _value.getTime
           : getTime // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -162,15 +141,15 @@ class __$QuotesModelCopyWithImpl<$Res> extends _$QuotesModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QuotesModel implements _QuotesModel {
-  _$_QuotesModel(
+class _$QuotesModelImpl implements _QuotesModel {
+  _$QuotesModelImpl(
       {@JsonKey(name: 'q') required this.quote,
       @JsonKey(name: 'a') required this.author,
       @JsonKey(name: 'h') required this.htmlQuote,
       @JsonKey(includeIfNull: false) required this.getTime});
 
-  factory _$_QuotesModel.fromJson(Map<String, dynamic> json) =>
-      _$$_QuotesModelFromJson(json);
+  factory _$QuotesModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuotesModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'q')
@@ -194,42 +173,43 @@ class _$_QuotesModel implements _QuotesModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _QuotesModel &&
-            const DeepCollectionEquality().equals(other.quote, quote) &&
-            const DeepCollectionEquality().equals(other.author, author) &&
-            const DeepCollectionEquality().equals(other.htmlQuote, htmlQuote) &&
-            const DeepCollectionEquality().equals(other.getTime, getTime));
+            other is _$QuotesModelImpl &&
+            (identical(other.quote, quote) || other.quote == quote) &&
+            (identical(other.author, author) || other.author == author) &&
+            (identical(other.htmlQuote, htmlQuote) ||
+                other.htmlQuote == htmlQuote) &&
+            (identical(other.getTime, getTime) || other.getTime == getTime));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(quote),
-      const DeepCollectionEquality().hash(author),
-      const DeepCollectionEquality().hash(htmlQuote),
-      const DeepCollectionEquality().hash(getTime));
 
   @JsonKey(ignore: true)
   @override
-  _$QuotesModelCopyWith<_QuotesModel> get copyWith =>
-      __$QuotesModelCopyWithImpl<_QuotesModel>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, quote, author, htmlQuote, getTime);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$QuotesModelImplCopyWith<_$QuotesModelImpl> get copyWith =>
+      __$$QuotesModelImplCopyWithImpl<_$QuotesModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuotesModelToJson(this);
+    return _$$QuotesModelImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _QuotesModel implements QuotesModel {
   factory _QuotesModel(
-          {@JsonKey(name: 'q') required String quote,
-          @JsonKey(name: 'a') required String author,
-          @JsonKey(name: 'h') required String htmlQuote,
-          @JsonKey(includeIfNull: false) required String? getTime}) =
-      _$_QuotesModel;
+          {@JsonKey(name: 'q') required final String quote,
+          @JsonKey(name: 'a') required final String author,
+          @JsonKey(name: 'h') required final String htmlQuote,
+          @JsonKey(includeIfNull: false) required final String? getTime}) =
+      _$QuotesModelImpl;
 
   factory _QuotesModel.fromJson(Map<String, dynamic> json) =
-      _$_QuotesModel.fromJson;
+      _$QuotesModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'q')
@@ -245,6 +225,6 @@ abstract class _QuotesModel implements QuotesModel {
   String? get getTime;
   @override
   @JsonKey(ignore: true)
-  _$QuotesModelCopyWith<_QuotesModel> get copyWith =>
+  _$$QuotesModelImplCopyWith<_$QuotesModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
