@@ -6,11 +6,12 @@ part of 'quote_user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_QuoteUser _$$_QuoteUserFromJson(Map<String, dynamic> json) => _$_QuoteUser(
+_$QuoteUserImpl _$$QuoteUserImplFromJson(Map<String, dynamic> json) =>
+    _$QuoteUserImpl(
       email: json['email'] as String,
     );
 
-Map<String, dynamic> _$$_QuoteUserToJson(_$_QuoteUser instance) =>
+Map<String, dynamic> _$$QuoteUserImplToJson(_$QuoteUserImpl instance) =>
     <String, dynamic>{
       'email': instance.email,
     };

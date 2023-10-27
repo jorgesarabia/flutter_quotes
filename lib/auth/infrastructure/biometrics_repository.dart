@@ -12,5 +12,5 @@ class BiometricsRepository implements IBiometrics {
   Future<bool> ceckBiometrics() => _auth.canCheckBiometrics;
 
   @override
-  Future<bool> authenticate() => _auth.authenticate(localizedReason: 'Inicie sesión para ver la frase del día');
+  Future<bool> authenticate() => _auth.authenticate(localizedReason: 'Login to get the Quote of the Day');
 }

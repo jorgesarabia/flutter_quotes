@@ -6,6 +6,7 @@
     "configurations": [
         {
             "name": "Flutter",
+            "program": "${workspaceFolder}/lib/main.dart",
             "request": "launch",
             "type": "dart",
         }

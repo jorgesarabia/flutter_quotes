@@ -36,7 +36,7 @@ class QuoteWidget extends StatelessWidget {
           const SizedBox(height: 20.0),
           Text(
             '~ ${quote.author} ~',
-            style: GoogleFonts.fredokaOne().copyWith(
+            style: GoogleFonts.fredoka().copyWith(
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),

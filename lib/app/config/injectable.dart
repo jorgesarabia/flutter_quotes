@@ -5,4 +5,4 @@ import 'package:injectable/injectable.dart';
 final getIt = GetIt.instance;
 
 @injectableInit
-Future<void> configureInjection() async => await $initGetIt(getIt);
+Future<void> configureInjection() async => await getIt.init();

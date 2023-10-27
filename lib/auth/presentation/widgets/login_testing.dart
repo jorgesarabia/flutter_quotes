@@ -5,16 +5,16 @@ class LoginTesting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
         Text(
-          '- Ingresar: admin@admin / Admin123',
+          '- Login: admin@admin / Admin123',
           textAlign: TextAlign.start,
         ),
-        Text('- Email repetido: repetido@admin'),
-        Text('- Email/password incorrecta: cualquier email'),
+        Text('- Repeated email: repeated@admin'),
+        Text('- Email/password does not match: any email/password'),
       ],
     );
   }
